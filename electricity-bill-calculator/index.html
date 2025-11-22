@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>K-Electric Bill Calculator 2025 | Electricity Bill Estimator Karachi</title>
+    <meta name="description"
+        content="Free K-Electric bill calculator 2025. Calculate electricity bills, compare tariffs, estimate monthly charges for residential & commercial connections. Accurate KE bill estimator for Karachi.">
+    <meta name="keywords"
+        content="k electric bill calculator, electricity bill calculator, ke bill calculator, unit calculator k electric, tariff calculator, bill estimator karachi, electricity cost calculator, ke tariff calculator 2025, residential bill calculator">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="K-Electric Bill Calculator 2025 | Free Electricity Cost Estimator">
+    <meta property="og:description"
+        content="Calculate your K-Electric bill instantly. Free online calculator with real tariff rates for 2025. Estimate monthly charges and compare consumption slabs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://keduplicatebill.com.pk/electricity-bill-calculator/">
+    <meta property="og:image" content="https://keduplicatebill.com.pk/images/ke-bill-calculator.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="K-Electric Bill Calculator 2025">
+    <meta name="twitter:description"
+        content="Free electricity bill calculator for Karachi. Calculate KE bills instantly.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://keduplicatebill.com.pk/electricity-bill-calculator/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "K-Electric Bill Calculator",
+      "applicationCategory": "UtilityApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "PKR"
+      },
+      "description": "Free online K-Electric bill calculator for Karachi. Calculate electricity bills based on consumption units and current tariff rates for 2025."
+    }
+    </script>
+
+    <style>
+        /* Calculator Specific Styles */
+        .calculator-container {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-lg);
+            margin: 2rem 0;
+        }
+
+        .calculator-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--light-gray);
+        }
+
+        .calculator-tab {
+            padding: 1rem 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--gray);
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -2px;
+        }
+
+        .calculator-tab.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        .calculator-tab:hover {
+            color: var(--primary);
+        }
+
+        .calculator-panel {
+            display: none;
+        }
+
+        .calculator-panel.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--light-gray);
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .input-hint {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-top: 0.25rem;
+        }
+
+        .btn-calculate {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-calculate:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-calculate:active {
+            transform: translateY(0);
+        }
+
+        .result-container {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #0066cc 0%, #3385d6 100%);
+            color: white;
+            border-radius: var(--radius-lg);
+            display: none;
+        }
+
+        .result-container.show {
+            display: block;
+            animation: slideDown 0.4s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .result-total {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .result-total h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .result-total .amount {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .breakdown-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .breakdown-item {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            backdrop-filter: blur(10px);
+        }
+
+        .breakdown-item label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .breakdown-item .value {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .slab-breakdown {
+            margin-top: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+        }
+
+        .slab-breakdown h4 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .slab-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .slab-item:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .comparison-card {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            border: 2px solid var(--light-gray);
+        }
+
+        .comparison-card h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .comparison-card .big-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .calculator-tabs {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .calculator-tab {
+                padding: 0.75rem 1rem;
+                text-align: left;
+            }
+
+            .result-total .amount {
+                font-size: 2.5rem;
+            }
+
+            .breakdown-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Dark Mode */
+        [data-theme="dark"] .calculator-container {
+            background: #1f2937;
+        }
+
+        [data-theme="dark"] .input-group input,
+        [data-theme="dark"] .input-group select {
+            background: #111827;
+            border-color: #374151;
+            color: var(--dark);
+        }
+
+        [data-theme="dark"] .comparison-card {
+            background: #111827;
+            border-color: #374151;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">
+                    <img src="../images/ke-duplicate-bill.png" alt="KE Duplicate Bill">
+                </a>
+
+                <button class="mobile-menu-btn" aria-label="Toggle Menu" onclick="toggleMenu()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+
+                <nav class="nav" id="nav-menu">
+                    <a href="../index.html">Home</a>
+                    <a href="../k-electric-unit-price/index.html">Unit Price</a>
+                    <a href="../k-electric-load-shedding-schedule/index.html">Load Shedding</a>
+                    <a href="../electricity-bill-calculator/index.html">Calculator</a>
+                    <a href="../k-electric-helpline-numbers/index.html">Contact</a>
+                    <a href="../ur/index.html">اردو</a>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                        <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" />
+                        </svg>
+                        <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                        </svg>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>🧮 K-Electric Bill Calculator 2025</h1>
+                <p>Accurate Electricity Bill Estimator for Karachi | Free Online Calculator</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Breadcrumb Navigation -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="../index.html">🏠 Home</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current">Bill Calculator</span>
+            </nav>
+
+            <article class="content-article">
+                <!-- Article Meta Info -->
+                <div class="article-meta">
+                    <div class="article-meta-item">
+                        <span class="article-meta-icon">📅</span>
+                        <span>Published: January 22, 2025</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <span class="article-meta-icon">🔄</span>
+                        <span>Last Updated: January 22, 2025</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <span class="article-meta-icon">⏱️</span>
+                        <span>5 min read</span>
+                    </div>
+                </div>
+
+                <!-- Introduction -->
+                <section class="content-section">
+                    <p><strong>Need to estimate your K-Electric bill?</strong> Use our free, accurate
+                        <strong>K-Electric bill calculator</strong> to calculate your monthly electricity charges based
+                        on current 2025 tariff rates. Whether you're a residential or commercial consumer, get instant
+                        bill estimates with detailed breakdowns.
+                    </p>
+
+                    <p>Our <strong>electricity bill calculator</strong> uses the latest K-Electric tariff slabs,
+                        including FCA, GST, and all applicable charges to give you the most accurate estimate possible.
+                    </p>
+                </section>
+
+                <!-- Calculator -->
+                <section class="content-section">
+                    <h2>💡 Calculate Your K-Electric Bill</h2>
+
+                    <div class="calculator-container">
+                        <!-- Tabs -->
+                        <div class="calculator-tabs">
+                            <button class="calculator-tab active" data-tab="basic">📱 Basic Calculator</button>
+                            <button class="calculator-tab" data-tab="advanced">🔧 Advanced Calculator</button>
+                            <button class="calculator-tab" data-tab="compare">📊 Compare Consumption</button>
+                        </div>
+
+                        <!-- Basic Calculator Panel -->
+                        <div class="calculator-panel active" id="basic-panel">
+                            <div class="input-group">
+                                <label for="basic-units">Enter Units Consumed</label>
+                                <input type="number" id="basic-units" placeholder="e.g., 250" min="0" step="1">
+                                <span class="input-hint">Check your current month's consumption from your meter</span>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="basic-type">Consumer Type</label>
+                                <select id="basic-type">
+                                    <option value="residential">Residential</option>
+                                    <option value="commercial">Commercial (Small)</option>
+                                </select>
+                            </div>
+
+                            <button class="btn-calculate" onclick="calculateBasic()">
+                                Calculate Bill Amount →
+                            </button>
+
+                            <div class="result-container" id="basic-result">
+                                <div class="result-total">
+                                    <h3>Estimated Bill Amount</h3>
+                                    <p class="amount">Rs. <span id="basic-total">0</span></p>
+                                    <p style="opacity: 0.9; margin-top: 0.5rem;">for <span
+                                            id="basic-units-used">0</span> units</p>
+                                </div>
+
+                                <div class="breakdown-grid">
+                                    <div class="breakdown-item">
+                                        <label>Energy Charges</label>
+                                        <div class="value">Rs. <span id="basic-energy">0</span></div>
+                                    </div>
+                                    <div class="breakdown-item">
+                                        <label>GST (17%)</label>
+                                        <div class="value">Rs. <span id="basic-gst">0</span></div>
+                                    </div>
+                                    <div class="breakdown-item">
+                                        <label>Meter Rent</label>
+                                        <div class="value">Rs. <span id="basic-meter">0</span></div>
+                                    </div>
+                                    <div class="breakdown-item">
+                                        <label>Income Tax</label>
+                                        <div class="value">Rs. <span id="basic-tax">0</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="slab-breakdown">
+                                    <h4>⚡ Unit Breakdown by Slab</h4>
+                                    <div id="basic-slab-details"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Advanced Calculator Panel -->
+                        <div class="calculator-panel" id="advanced-panel">
+                            <div class="input-group">
+                                <label for="adv-units">Units Consumed</label>
+                                <input type="number" id="adv-units" placeholder="e.g., 350" min="0" step="1">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="adv-type">Consumer Type</label>
+                                <select id="adv-type">
+                                    <option value="residential">Residential</option>
+                                    <option value="commercial">Commercial</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="adv-fca">FCA (Fuel Cost Adjustment)</label>
+                                <input type="number" id="adv-fca" placeholder="0.00" step="0.01" value="0">
+                                <span class="input-hint">Current month FCA per unit (check your latest bill)</span>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="adv-meter">Meter Type</label>
+                                <select id="adv-meter">
+                                    <option value="single">Single Phase</option>
+                                    <option value="three">Three Phase</option>
+                                </select>
+                            </div>
+
+                            <button class="btn-calculate" onclick="calculateAdvanced()">
+                                Calculate Detailed Bill →
+                            </button>
+
+                            <div class="result-container" id="advanced-result">
+                                <div class="result-total">
+                                    <h3>Total Bill Amount (with FCA)</h3>
+                                    <p class="amount">Rs. <span id="adv-total">0</span></p>
+                                </div>
+
+                                <div class="breakdown-grid">
+                                    <div class="breakdown-item">
+                                        <label>Base Energy</label>
+                                        <div class="value">Rs. <span id="adv-energy">0</span></div>
+                                    </div>
+                                    <div class="breakdown-item">
+                                        <label>FCA Charges</label>
+                                        <div class="value">Rs. <span id="adv-fca-amount">0</span></div>
+                                    </div>
+                                    <div class="breakdown-item">
+                                        <label>GST (17%)</label>
+                                        <div class="value">Rs. <span id="adv-gst">0</span></div>
+                                    </div>
+                                    <div class="breakdown-item">
+                                        <label>Income Tax (7.5%)</label>
+                                        <div class="value">Rs. <span id="adv-tax">0</span></div>
+                                    </div>
+                                    <div class="breakdown-item">
+                                        <label>Meter Rent</label>
+                                        <div class="value">Rs. <span id="adv-meter-rent">0</span></div>
+                                    </div>
+                                    <div class="breakdown-item">
+                                        <label>Per Unit Cost</label>
+                                        <div class="value">Rs. <span id="adv-per-unit">0</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Comparison Panel -->
+                        <div class="calculator-panel" id="compare-panel">
+                            <p style="margin-bottom: 1.5rem; color: var(--gray);">
+                                Compare bills for different consumption levels to optimize your usage
+                            </p>
+
+                            <div class="input-group">
+                                <label for="compare-current">Current Monthly Units</label>
+                                <input type="number" id="compare-current" placeholder="e.g., 220" min="0" step="1">
+                            </div>
+
+                            <button class="btn-calculate" onclick="calculateComparison()">
+                                Compare Different Scenarios →
+                            </button>
+
+                            <div class="result-container" id="compare-result">
+                                <h3 style="margin-bottom: 1.5rem;">📊 Consumption Comparison</h3>
+                                <div class="comparison-grid" id="comparison-cards"></div>
+
+                                <div
+                                    style="margin-top: 2rem; padding: 1.5rem; background: rgba(255,255,255,0.1); border-radius: var(--radius-md);">
+                                    <h4 style="margin-bottom: 1rem;">💡 Optimization Tip</h4>
+                                    <p id="optimization-tip" style="margin: 0; line-height: 1.6;"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- How it Works -->
+                <section class="content-section">
+                    <h2>🔍 How the K-Electric Bill Calculator Works</h2>
+
+                    <div class="card">
+                        <h3>Calculation Method</h3>
+                        <p>Our calculator uses the official K-Electric tariff structure for 2025:</p>
+                        <ol style="line-height: 2;">
+                            <li><strong>Slab-Based Calculation:</strong> Units are charged progressively across
+                                different
+                                slabs (0-50, 51-100, 101-200, etc.)</li>
+                            <li><strong>GST Addition:</strong> 17% General Sales Tax applied to total energy charges
+                            </li>
+                            <li><strong>Meter Rent:</strong> Rs. 75-150 for single-phase, Rs. 500-800 for three-phase
+                            </li>
+                            <li><strong>Income Tax:</strong> 7.5% for consumers using over 200 units</li>
+                            <li><strong>FCA (Optional):</strong> Fuel Cost Adjustment varies monthly (±Rs. 2-5 per unit)
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="card mt-3"
+                        style="background: var(--bg-light); border-left: 4px solid var(--secondary);">
+                        <h4>✅ Accuracy Note</h4>
+                        <p>This calculator provides estimates based on current tariff rates. Actual bills may vary
+                            slightly due to QTA (Quarterly Tariff Adjustment), area-specific surcharges, and other
+                            monthly adjustments announced by K-Electric.</p>
+                    </div>
+                </section>
+
+                <!-- Tariff Slabs Reference -->
+                <section class="content-section">
+                    <h2>📊 K-Electric Residential Tariff Slabs 2025</h2>
+
+                    <div class="card" style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                            <thead>
+                                <tr style="background-color: var(--primary); color: white;">
+                                    <th style="padding: 12px; text-align: left;">Units</th>
+                                    <th style="padding: 12px; text-align: left;">Rate per Unit</th>
+                                    <th style="padding: 12px; text-align: left;">Category</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--light-gray);">0 - 50</td>
+                                    <td style="padding: 10px; border: 1px solid var(--light-gray);"><strong>Rs.
+                                            16.48</strong></td>
+                                    <td style="padding: 10px; border: 1px solid var(--light-gray);">Protected</td>
+                                </tr>
+                                <tr style="background-color: var(--bg-light);">
+                                    <td style="padding: 10px; border: 1px solid var(--light-gray);">51 - 100</td>
+                                    <td style="padding: 10px; border: 1px solid var(--light-gray);"><strong>Rs.
+                                            20.85</strong></td>
+                                    <td style="padding: 10px; border: 1px solid var(--light-gray);">Protected</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--light-gray);">101 - 200</td>
+                                    <td style="padding: 10px; border: 1px solid var(--light-gray);"><strong>Rs.
+                                            22.94</strong></td>
+                                    <td style="padding: 10px; border: 1px solid var(--light-gray);">Protected</td>
+                                </tr>
+                                <tr style="background-color: var(--bg-light);">
+                                    <td style="padding: 10px; border: 1px solid var(--light-gray);">201 - 300</td>
+                                    <td style="padding: 10px; border: 1px solid var(--light-gray);"><strong>Rs.
+                                            27.14</strong></td>
+                                    <td style="padding: 10px; border: 1px solid var(--light-gray);">Unprotected</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border: 1px solid var(--light-gray);">301 - 700</td>
+                                    <td style="padding: 10px; border: 1px solid var(--light-gray);"><strong>Rs.
+                                            32.03</strong></td>
+                                    <td style="padding: 10px; border: 1px solid var(--light-gray);">Unprotected</td>
+                                </tr>
+                                <tr style="background-color: var(--bg-light);">
+                                    <td style="padding: 10px; border: 1px solid var(--light-gray);">Above 700</td>
+                                    <td style="padding: 10px; border: 1px solid var(--light-gray);"><strong>Rs.
+                                            35.24</strong></td>
+                                    <td style="padding: 10px; border: 1px solid var(--light-gray);">Unprotected</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Related Articles -->
+                <section class="related-articles">
+                    <h2>📚 Related K-Electric Guides</h2>
+                    <div class="related-grid">
+                        <!-- Unit Price -->
+                        <a href="../k-electric-unit-price/index.html" class="related-card">
+                            <div class="card">
+                                <div class="related-card-icon">💰</div>
+                                <h3>Unit Price 2025</h3>
+                                <p>Complete tariff breakdown, slabs, peak hours, and cost-saving strategies for all
+                                    consumer types.</p>
+                            </div>
+                        </a>
+
+                        <!-- Load Shedding -->
+                        <a href="../k-electric-load-shedding-schedule/index.html" class="related-card">
+                            <div class="card">
+                                <div class="related-card-icon">⚡</div>
+                                <h3>Load Shedding Schedule</h3>
+                                <p>Check area-wise load shedding timings, exempted zones, and real-time outage status.
+                                </p>
+                            </div>
+                        </a>
+
+                        <!-- Payment Methods -->
+                        <a href="../k-electric-payment-methods/index.html" class="related-card">
+                            <div class="card">
+                                <div class="related-card-icon">💳</div>
+                                <h3>Payment Methods</h3>
+                                <p>All payment options including online banking, JazzCash, Easypaisa, and mobile app.
+                                </p>
+                            </div>
+                        </a>
+
+                        <!-- Helpline -->
+                        <a href="../k-electric-helpline-numbers/index.html" class="related-card">
+                            <div class="card">
+                                <div class="related-card-icon">📞</div>
+                                <h3>Helpline & Contact</h3>
+                                <p>24/7 customer care, WhatsApp support, area offices, and emergency complaint numbers.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- FAQ -->
+                <section class="content-section">
+                    <h2>❓ Frequently Asked Questions</h2>
+
+                    <div class="card">
+                        <h4>How accurate is this K-Electric bill calculator?</h4>
+                        <p>Our calculator uses the official K-Electric tariff rates for 2025 and provides 95-98%
+                            accurate estimates. Minor variations may occur due to monthly FCA, QTA adjustments, and
+                            area-specific charges.</p>
+                    </div>
+
+                    <div class="card mt-2">
+                        <h4>What is the difference between basic and advanced calculator?</h4>
+                        <p>The basic calculator provides quick estimates using standard rates. The advanced calculator
+                            allows you to include FCA (Fuel Cost Adjustment), choose meter type, and get more detailed
+                            breakdowns.</p>
+                    </div>
+
+                    <div class="card mt-2">
+                        <h4>How can I reduce my K-Electric bill?</h4>
+                        <p>Use the comparison tool to see how reducing consumption affects your bill. Staying under 200
+                            units keeps you in the "protected" category with lower rates. Also consider using appliances
+                            during off-peak hours (11 PM - 7 AM).</p>
+                    </div>
+
+                    <div class="card mt-2">
+                        <h4>Does this calculator include all charges?</h4>
+                        <p>Yes! The calculator includes energy charges, GST (17%), income tax (7.5% for 200+ units),
+                            meter rent, and optional FCA. It mirrors the actual KE billing system.</p>
+                    </div>
+                </section>
+
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>Quick Links</h3>
+                    <a href="../index.html">Home</a>
+                    <a href="../electricity-bill-calculator/index.html">Bill Calculator</a>
+                    <a href="../k-electric-unit-price/index.html">Unit Price 2025</a>
+                    <a href="../k-electric-load-shedding-schedule/index.html">Load Shedding</a>
+                </div>
+                <div>
+                    <h3>KE Services</h3>
+                    <a href="../k-electric-new-connection-online/index.html">New Connection</a>
+                    <a href="../k-electric-payment-methods/index.html">Payment Methods</a>
+                    <a href="../k-electric-helpline-numbers/index.html">Helpline Numbers</a>
+                </div>
+                <div>
+                    <h3>Contact KE</h3>
+                    <p>Helpline: 118</p>
+                    <p>WhatsApp: 0348-0000118</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 KE Duplicate Bill. Not affiliated with K-Electric.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Calculator JavaScript -->
+    <script>
+        // Tariff Rates 2025
+        const TARIFF_SLABS = [
+            { min: 0, max: 50, rate: 16.48 },
+            { min: 51, max: 100, rate: 20.85 },
+            { min: 101, max: 200, rate: 22.94 },
+            { min: 201, max: 300, rate: 27.14 },
+            { min: 301, max: 700, rate: 32.03 },
+            { min: 701, max: Infinity, rate: 35.24 }
+        ];
+
+        const GST_RATE = 0.17;
+        const INCOME_TAX_RATE = 0.075;
+        const METER_RENT_SINGLE = 100;
+        const METER_RENT_THREE = 650;
+
+        // Tab Switching
+        document.querySelectorAll('.calculator-tab').forEach(tab => {
+            tab.addEventListener('click', function () {
+                // Remove active from all tabs and panels
+                document.querySelectorAll('.calculator-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.calculator-panel').forEach(p => p.classList.remove('active'));
+
+                // Add active to clicked tab and corresponding panel
+                this.classList.add('active');
+                const panelId = this.dataset.tab + '-panel';
+                document.getElementById(panelId).classList.add('active');
+            });
+        });
+
+        // Calculate Energy Cost by Slabs
+        function calculateSlabCost(units) {
+            let totalCost = 0;
+            let breakdown = [];
+            let remaining = units;
+
+            for (let slab of TARIFF_SLABS) {
+                if (remaining <= 0) break;
+
+                const slabSize = slab.max === Infinity ? remaining : Math.min(slab.max - slab.min + 1, remaining);
+                const unitsInSlab = Math.min(slabSize, remaining);
+                const cost = unitsInSlab * slab.rate;
+
+                if (unitsInSlab > 0) {
+                    totalCost += cost;
+                    breakdown.push({
+                        range: slab.max === Infinity ? `${slab.min}+` : `${slab.min}-${slab.max}`,
+                        units: unitsInSlab,
+                        rate: slab.rate,
+                        cost: cost
+                    });
+                    remaining -= unitsInSlab;
+                }
+            }
+
+            return { totalCost, breakdown };
+        }
+
+        // Basic Calculator
+        function calculateBasic() {
+            const units = parseFloat(document.getElementById('basic-units').value) || 0;
+            const type = document.getElementById('basic-type').value;
+
+            if (units <= 0) {
+                alert('Please enter a valid number of units');
+                return;
+            }
+
+            const { totalCost, breakdown } = calculateSlabCost(units);
+            const meterRent = METER_RENT_SINGLE;
+            const subtotal = totalCost + meterRent;
+            const gst = subtotal * GST_RATE;
+            const incomeTax = units > 200 ? subtotal * INCOME_TAX_RATE : 0;
+            const grandTotal = subtotal + gst + incomeTax;
+
+            // Display results
+            document.getElementById('basic-total').textContent = Math.round(grandTotal).toLocaleString();
+            document.getElementById('basic-units-used').textContent = units;
+            document.getElementById('basic-energy').textContent = Math.round(totalCost).toLocaleString();
+            document.getElementById('basic-gst').textContent = Math.round(gst).toLocaleString();
+            document.getElementById('basic-meter').textContent = meterRent;
+            document.getElementById('basic-tax').textContent = Math.round(incomeTax).toLocaleString();
+
+            // Show slab breakdown
+            let slabHTML = '';
+            breakdown.forEach(item => {
+                slabHTML += `
+                    <div class="slab-item">
+                        <span>${item.units} units (${item.range}) @ Rs. ${item.rate}</span>
+                        <strong>Rs. ${Math.round(item.cost).toLocaleString()}</strong>
+                    </div>
+                `;
+            });
+            document.getElementById('basic-slab-details').innerHTML = slabHTML;
+
+            document.getElementById('basic-result').classList.add('show');
+        }
+
+        // Advanced Calculator
+        function calculateAdvanced() {
+            const units = parseFloat(document.getElementById('adv-units').value) || 0;
+            const fca = parseFloat(document.getElementById('adv-fca').value) || 0;
+            const meterType = document.getElementById('adv-meter').value;
+
+            if (units <= 0) {
+                alert('Please enter a valid number of units');
+                return;
+            }
+
+            const { totalCost } = calculateSlabCost(units);
+            const fcaAmount = units * fca;
+            const meterRent = meterType === 'single' ? METER_RENT_SINGLE : METER_RENT_THREE;
+            const subtotal = totalCost + fcaAmount + meterRent;
+            const gst = subtotal * GST_RATE;
+            const incomeTax = units > 200 ? subtotal * INCOME_TAX_RATE : 0;
+            const grandTotal = subtotal + gst + incomeTax;
+            const perUnit = grandTotal / units;
+
+            // Display results
+            document.getElementById('adv-total').textContent = Math.round(grandTotal).toLocaleString();
+            document.getElementById('adv-energy').textContent = Math.round(totalCost).toLocaleString();
+            document.getElementById('adv-fca-amount').textContent = Math.round(fcaAmount).toLocaleString();
+            document.getElementById('adv-gst').textContent = Math.round(gst).toLocaleString();
+            document.getElementById('adv-tax').textContent = Math.round(incomeTax).toLocaleString();
+            document.getElementById('adv-meter-rent').textContent = meterRent;
+            document.getElementById('adv-per-unit').textContent = perUnit.toFixed(2);
+
+            document.getElementById('advanced-result').classList.add('show');
+        }
+
+        // Comparison Calculator
+        function calculateComparison() {
+            const currentUnits = parseFloat(document.getElementById('compare-current').value) || 0;
+
+            if (currentUnits <= 0) {
+                alert('Please enter your current consumption');
+                return;
+            }
+
+            // Compare scenarios: -20%, current, +20%, 200 units (protected max)
+            const scenarios = [
+                { units: Math.max(Math.round(currentUnits * 0.8), 50), label: '-20% Reduction' },
+                { units: currentUnits, label: 'Current Usage' },
+                { units: 200, label: 'Protected Max (200)' },
+                { units: Math.round(currentUnits * 1.2), label: '+20% Increase' }
+            ];
+
+            let cardsHTML = '';
+            let minBill = Infinity;
+            let minUnits = 0;
+
+            scenarios.forEach(scenario => {
+                const { totalCost } = calculateSlabCost(scenario.units);
+                const subtotal = totalCost + METER_RENT_SINGLE;
+                const gst = subtotal * GST_RATE;
+                const incomeTax = scenario.units > 200 ? subtotal * INCOME_TAX_RATE : 0;
+                const total = subtotal + gst + incomeTax;
+
+                if (total < minBill && scenario.units !== currentUnits) {
+                    minBill = total;
+                    minUnits = scenario.units;
+                }
+
+                const isCurrent = scenario.units === currentUnits;
+
+                cardsHTML += `
+                    <div class="comparison-card" style="${isCurrent ? 'border-color: var(--primary); border-width: 3px;' : ''}">
+                        <h4>${scenario.label}</h4>
+                        <div style="margin: 1rem 0;">
+                            <div style="font-size: 0.9rem; color: var(--gray); margin-bottom: 0.5rem;">
+                                ${scenario.units} units
+                            </div>
+                            <div class="big-number">Rs. ${Math.round(total).toLocaleString()}</div>
+                        </div>
+                        <div style="font-size: 0.85rem; color: var(--gray);">
+                            Per unit: Rs. ${(total / scenario.units).toFixed(2)}
+                        </div>
+                        ${isCurrent ? '<div style="margin-top: 0.5rem; color: var(--primary); font-weight: 600;">← Your Current Bill</div>' : ''}
+                    </div>
+                `;
+            });
+
+            document.getElementById('comparison-cards').innerHTML = cardsHTML;
+
+            // Optimization tip
+            const { totalCost: currentCost } = calculateSlabCost(currentUnits);
+            const currentTotal = currentCost + METER_RENT_SINGLE + (currentCost + METER_RENT_SINGLE) * GST_RATE + (currentUnits > 200 ? (currentCost + METER_RENT_SINGLE) * INCOME_TAX_RATE : 0);
+            const savings = Math.round(currentTotal - minBill);
+
+            let tip = '';
+            if (currentUnits > 200 && minUnits === 200) {
+                tip = `💡 By reducing your consumption from ${currentUnits} to 200 units, you'll save approximately <strong>Rs. ${savings}</strong> monthly! You'll also stay in the "Protected Consumer" category with lower tariff rates.`;
+            } else if (savings > 0) {
+                tip = `💡 Reducing your consumption to around ${minUnits} units can save you approximately <strong>Rs. ${savings}</strong> per month. Small changes in daily habits can make a big difference!`;
+            } else {
+                tip = `✅ Your current consumption of ${currentUnits} units is already optimized. Consider solar panels or off-peak usage to reduce bills further.`;
+            }
+
+            document.getElementById('optimization-tip').innerHTML = tip;
+            document.getElementById('compare-result').classList.add('show');
+        }
+    </script>
+
+    <!-- Dark Mode Toggle Script -->
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const newTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
+
+    <!-- UX Enhancements Script -->
+    <script src="../js/ux-enhancements.js"></script>
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('nav-menu');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

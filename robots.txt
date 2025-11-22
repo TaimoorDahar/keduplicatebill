@@ -1,0 +1,11 @@
+# robots.txt for keduplicatebill.com.pk
+
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://keduplicatebill.com.pk/sitemap.xml
+
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1
