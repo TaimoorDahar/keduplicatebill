@@ -78,7 +78,7 @@ function injectLayout() {
             <div class="container">
                 <div class="header-content">
                     <a href="../index.html" class="logo">
-                        <img src="../images/ke-duplicate-bill.png" alt="KE Duplicate Bill">
+                        <img src="../images/ke-duplicate-bill.webp" alt="KE Duplicate Bill">
                     </a>
 
                     <button class="mobile-menu-btn" aria-label="Toggle Menu" onclick="toggleMenu()">
@@ -153,7 +153,7 @@ function injectLayout() {
             <div class="container">
                 <div class="header-content">
                     <a href="${prefix}index.html" class="logo">
-                        <img src="${prefix}images/ke-duplicate-bill.png" alt="KE Duplicate Bill">
+                        <img src="${prefix}images/ke-duplicate-bill.webp" alt="KE Duplicate Bill">
                     </a>
 
                     <button class="mobile-menu-btn" aria-label="Toggle Menu" onclick="toggleMenu()">
