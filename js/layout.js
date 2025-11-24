@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     injectLayout();
     initializeScripts();
     initializeAdSense();
+    initializeAnalytics();
 });
 
 function initializeAdSense() {
@@ -20,6 +21,19 @@ function initializeAdSense() {
     }
     document.addEventListener('click', loadAdSense, { once: true });
     document.addEventListener('scroll', loadAdSense, { once: true });
+}
+
+function initializeAnalytics() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-DV5RQC5ZQW";
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-DV5RQC5ZQW');
 }
 
 function injectLayout() {

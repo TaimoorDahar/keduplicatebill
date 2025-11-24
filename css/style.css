@@ -758,18 +758,17 @@ iframe {
 @media (max-width: 480px) {
   .iframe-container {
     height: auto;
-    /* Allow it to grow */
-    min-height: 3200px;
-    /* Force very tall height to show full bill */
+    min-height: 4500px;
+    /* Extreme height to ensure no cutoff */
     padding-bottom: 50px;
   }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
   .iframe-container {
-    height: 180vh;
-    /* Extra tall on mobile to show all billing details and table with space below */
-    min-height: 1500px;
+    height: auto;
+    min-height: 4500px;
+    /* Extreme height for tablets too */
   }
 }
 
