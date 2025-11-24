@@ -21,6 +21,9 @@ function initializeAdSense() {
     }
     document.addEventListener('click', loadAdSense, { once: true });
     document.addEventListener('scroll', loadAdSense, { once: true });
+    document.addEventListener('mousemove', loadAdSense, { once: true });
+    document.addEventListener('touchstart', loadAdSense, { once: true });
+    document.addEventListener('keydown', loadAdSense, { once: true });
 }
 
 function initializeAnalytics() {
