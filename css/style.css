@@ -758,7 +758,7 @@ iframe {
 @media (max-width: 480px) {
   .iframe-container {
     height: auto;
-    min-height: 4500px;
+    min-height: 1517px;
     /* Extreme height to ensure no cutoff */
     padding-bottom: 50px;
   }
