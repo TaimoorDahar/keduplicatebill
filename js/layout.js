@@ -5,7 +5,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     injectLayout();
     initializeScripts();
+    initializeAdSense();
 });
+
+function initializeAdSense() {
+    function loadAdSense() {
+        if (document.getElementById('google-adsense')) return;
+        var script = document.createElement('script');
+        script.id = 'google-adsense';
+        script.async = true;
+        script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8161470337922791";
+        script.crossOrigin = "anonymous";
+        document.head.appendChild(script);
+    }
+    document.addEventListener('click', loadAdSense, { once: true });
+}
 
 function injectLayout() {
     // Determine path prefix based on current location
