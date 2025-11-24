@@ -663,7 +663,7 @@ iframe {
   /* Full viewport height on desktop */
   min-height: 600px;
   /* Minimum height to ensure content is visible */
-  overflow: hidden;
+  overflow: auto;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   background: var(--white);
@@ -757,9 +757,11 @@ iframe {
 /* Responsive adjustments for iframe - Taller on mobile/tablet */
 @media (max-width: 480px) {
   .iframe-container {
-    height: 200vh;
-    /* Very tall on small phones to show all content */
-    min-height: 1400px;
+    height: auto;
+    /* Allow it to grow */
+    min-height: 2500px;
+    /* Force very tall height to show full bill */
+    padding-bottom: 50px;
   }
 }
 
@@ -767,7 +769,7 @@ iframe {
   .iframe-container {
     height: 180vh;
     /* Extra tall on mobile to show all billing details and table with space below */
-    min-height: 1200px;
+    min-height: 1500px;
   }
 }
 
@@ -1148,9 +1150,10 @@ html {
     display: none !important;
   }
 }
+
 /* Infographic Styles */
 @media (min-width: 992px) {
-    .infographic-arrow {
-        display: block !important;
-    }
+  .infographic-arrow {
+    display: block !important;
+  }
 }
