@@ -19,6 +19,7 @@ function initializeAdSense() {
         document.head.appendChild(script);
     }
     document.addEventListener('click', loadAdSense, { once: true });
+    document.addEventListener('scroll', loadAdSense, { once: true });
 }
 
 function injectLayout() {
