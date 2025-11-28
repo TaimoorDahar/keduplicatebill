@@ -88,7 +88,7 @@
                 <!-- Iframe from existing site -->
 
                 <div class="iframe-container">
-                    <div class="iframe-loader">
+                    <div class="iframe-loader" id="bill-loader">
                         <div class="loader-dots">
                             <div class="dot"></div>
                             <div class="dot"></div>
@@ -96,9 +96,23 @@
                         </div>
                         <p>Loading Bill Checker...</p>
                     </div>
-                    <iframe src="https://staging.ke.com.pk:24555/" frameborder="0" scrolling="no" loading="lazy"
-                        onload="this.previousElementSibling.style.display='none'"></iframe>
+                    <iframe src="https://staging.ke.com.pk:24555/" frameborder="0" scrolling="no"
+                        loading="lazy"></iframe>
                 </div>
+
+                <script>
+                    // Hide loader after 2 seconds (approximately 80% of load time)
+                    setTimeout(function () {
+                        var loader = document.getElementById('bill-loader');
+                        if (loader) {
+                            loader.style.opacity = '0';
+                            loader.style.transition = 'opacity 0.3s ease';
+                            setTimeout(function () {
+                                loader.style.display = 'none';
+                            }, 300);
+                        }
+                    }, 2000);
+                </script>
 
             </div>
         </div>

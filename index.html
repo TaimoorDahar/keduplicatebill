@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="bzE_6XRNNFNaQYpwgcaI6y_yQLutiJimDTHjsAe9N7A" />
 
+    <!-- Resource Hints for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+
     <!-- SEO Meta Tags -->
     <title>KE Duplicate Bill 2025: Check & Download Online</title>
     <meta name="description"
@@ -28,10 +34,6 @@
         content="Access your KE duplicate bill for 2025 online, via WhatsApp, or SMS. Enter your 13-digit account number to view, download, or pay your K-Electric bill in Karachi!">
     <meta name="twitter:image" content="https://keduplicatebill.com.pk/images/Ke-Duplicate-bill-View-Download.webp">
 
-    <!-- Keywords -->
-    <meta name="keywords"
-        content="KE duplicate bill, K-Electric bill, KESC bill, KE bill online, duplicate electricity bill Karachi, KE bill check, KE bill download, K-Electric online bill, KE WhatsApp bill, KE SMS bill">
-
     <!-- Canonical -->
     <link rel="canonical" href="https://keduplicatebill.com.pk/">
     <link rel="alternate" hreflang="en" href="https://keduplicatebill.com.pk/">
@@ -41,15 +43,220 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="./css/style.min.css">
+    <!-- Critical CSS Inline for Fast FCP -->
+    <style>
+        :root {
+            --primary: #0066cc;
+            --primary-dark: #004999;
+            --primary-light: #3385d6;
+            --white: #ffffff;
+            --dark: #1a1a2e;
+            --dark-gray: #2d2d44;
+            --bg-light: #f8f9fa;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, .1);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, .15);
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif
+        }
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        [data-theme=dark] {
+            --primary: #4d9fff;
+            --dark: #e9ecef;
+            --dark-gray: #d1d5db;
+            --bg-light: #1f2937;
+            --white: #111827
+        }
 
-    <!-- Schema.org JSON-LD -->
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        html {
+            font-size: 16px
+        }
+
+        body {
+            font-family: var(--font-primary);
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-md);
+            color: var(--dark)
+        }
+
+        h1 {
+            font-size: 2.5rem
+        }
+
+        h2 {
+            font-size: 2rem
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md)
+        }
+
+        .header {
+            background: #fff;
+            color: var(--dark);
+            padding: var(--spacing-sm) 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #e9ecef
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm)
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto
+        }
+
+        .nav {
+            display: flex;
+            gap: var(--spacing-lg);
+            flex-wrap: wrap;
+            align-items: center
+        }
+
+        .nav a {
+            color: #000033;
+            font-weight: 500;
+            text-decoration: none;
+            padding: .5rem 0;
+            white-space: nowrap
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0066cc 0%, #3385d6 100%);
+            color: var(--white);
+            padding: var(--spacing-xl) 0;
+            text-align: center
+        }
+
+        .hero h1 {
+            color: #fff !important;
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            margin-bottom: var(--spacing-sm);
+            font-weight: 700
+        }
+
+        .hero p {
+            color: rgba(255, 255, 255, .95) !important;
+            font-size: 1rem;
+            margin-bottom: 0
+        }
+
+        .bill-checker {
+            background: var(--bg-light);
+            padding: var(--spacing-xl) 0
+        }
+
+        .bill-checker-card {
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-lg)
+        }
+
+        .btn {
+            display: inline-block;
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            text-decoration: none
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #0066cc 0%, #004999 100%);
+            color: var(--white);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .05)
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-md)
+        }
+
+        [data-theme=dark] .header {
+            background: #1f2937;
+            border-bottom-color: #374151
+        }
+
+        [data-theme=dark] .hero {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)
+        }
+
+        [data-theme=dark] .card {
+            background: #1f2937;
+            border: 1px solid #374151
+        }
+
+        [data-theme=dark] .bill-checker {
+            background: #111827
+        }
+
+        [data-theme=dark] .bill-checker-card {
+            background: #1f2937;
+            border: 1px solid #374151
+        }
+    </style>
+
+    <!-- Preload Full Stylesheet -->
+    <link rel="preload" href="./css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="./css/style.min.css">
+    </noscript>
+
+    <!-- Optimized Google Fonts with font-display swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- Critical Schema Only - WebSite and BreadcrumbList -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -69,125 +276,6 @@
     }
     </script>
 
-    <!-- Article Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "How to View and Download Your KE Duplicate Bill Online – A Complete Guide",
-      "description": "Complete guide to accessing your K-Electric duplicate bill online, via WhatsApp, SMS, and more.",
-      "image": "https://keduplicatebill.com.pk/images/Ke-Duplicate-bill-View-Download.webp",
-      "author": {
-        "@type": "Organization",
-        "name": "KE Duplicate Bill"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "KE Duplicate Bill",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://keduplicatebill.com.pk/images/ke-duplicate-bill.webp"
-        }
-      },
-      "datePublished": "2025-11-20",
-      "dateModified": "2025-11-20"
-    }
-    </script>
-
-    <!-- FAQPage Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "Where can I find information about my Tariff on my K Electric bill?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can easily locate details about your Tariff on your K Electric bill. Look under the Consumer Details section to find this information. For a deeper understanding, you can refer to the most recent applicable Tariff, which the Government of Pakistan officially declares. To access the latest Tariff structure, visit ke.com.pk/tariff-structure."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Is K Electric Private?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, K Electric is now owned by a private company. It used to be government-owned, but that changed in 2005. Now, the government only owns a small portion of the company, and most of it is owned by private businesses or individuals."
-        }
-      }, {
-        "@type": "Question",
-        "name": "What is the WhatsApp number for K Electric duplicate bill?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can access your K Electric duplicate bill directly through their WhatsApp service! Save the helpline number (0348-0000118) and send “Hi” to initiate a chat. Once connected, simply request your duplicate bill and follow the prompts."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Where can I find my K electric bill account number?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Your K Electric bill account number is a unique 13-digit identification code located prominently on your bill. It’s typically found at the top of the bill or near your customer information section."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Who is the CEO of K-Electric?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The current CEO of K-Electric is Syed Moonis Abdullah Alvi. Syed Moonis Abdullah Alvi has over 30 years of experience in finance. He joined K-Electric in 2008 and held key positions like CFO and Company Secretary before becoming CEO in 2018."
-        }
-      }, {
-        "@type": "Question",
-        "name": "How do I inquire about Net Metering?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "For inquiries related to Net Metering, specifically designed for solar power generation, contact K Electric via email at net.metering@ke.com.pk."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Where can I find my consumer number on my K Electric bill?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Your K Electric consumer number is an important 8-digit identification code located on your bill. Look for it near your customer information. The consumer number helps identify your specific account and service connection."
-        }
-      }, {
-        "@type": "Question",
-        "name": "What are the peak hours of electricity in Karachi?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "K-Electric’s peak hours in Karachi are: April to October: 6:30 PM to 10:30 PM, November to March: 6:00 PM to 10:00 PM"
-        }
-      }, {
-        "@type": "Question",
-        "name": "What are the peak hours for electricity in Pakistan?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Peak hours can vary across different regions in Pakistan. However, they generally occur in the late afternoon and early evening."
-        }
-      }, {
-        "@type": "Question",
-        "name": "What are off-peak hours for electricity?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Off-peak hours are the times of day when electricity demand is lowest. These are typically outside of peak hours, such as early morning and late night."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Where is K-Electric headquarters?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The headquarters of K-Electric is located at KE House, 39-B, Sunset Boulevard, Phase-II, Defence Housing Authority, Karachi. You can reach K-Electric (formerly KESC) by calling 92-21-3263 7133 or 92-21-3870 9132. You can reach customer service by calling 118 or 99000."
-        }
-      }, {
-        "@type": "Question",
-        "name": "How do I check my electricity bill through SMS?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To check your K-Electric electricity bill through SMS, follow these steps: 1. Compose a New SMS: Open the messaging app on your phone. 2. Enter the Recipient Number: Type the K-Electric SMS service number (e.g., 8119). 3. Enter Your Account Number: Type your 13-digit K-Electric account number in the message body. 4. Send the SMS: Press send."
-        }
-      }]
-    }
-    </script>
-
-    <!-- BreadcrumbList Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -440,8 +528,9 @@
             <h2>How to View and Download Your KE Duplicate Bill Online</h2>
             <p>Accessing your KE duplicate bill online is quick and straightforward. Follow these steps:</p>
 
-            <img src="./images/how-to-download-ke-bill.webp" alt="How to Download KE Bill Infographic"
-                style="max-width: 100%; height: auto; border-radius: 8px; margin: 1.5rem 0;" loading="lazy">
+            <img src="./images/how-to-download-ke-bill.webp" alt="How to Download KE Bill Infographic" width="800"
+                height="1200" style="max-width: 100%; height: auto; border-radius: 8px; margin: 1.5rem 0;"
+                loading="lazy">
 
             <ol>
                 <li><strong>Visit the Official Website:</strong> Go to <a
@@ -451,6 +540,7 @@
             </ol>
 
             <img src="./images/ke-duplicate-bill-account-number-view.webp" alt="KE Bill Account Number Location"
+                width="600" height="400"
                 style="max-width: 600px; width: 100%; height: auto; border-radius: 8px; margin: 1rem 0;" loading="lazy">
 
             <div class="card mt-3 mb-3">
@@ -476,7 +566,7 @@
             </ul>
 
             <div class="text-center mt-3 mb-3">
-                <img src="./images/ke-whatsapp-chat-mockup.webp" alt="KE WhatsApp Chat"
+                <img src="./images/ke-whatsapp-chat-mockup.webp" alt="KE WhatsApp Chat" width="400" height="600"
                     style="max-width: 400px; width: 100%; height: auto; border-radius: 8px; margin-bottom: 1rem;"
                     loading="lazy">
                 <br>
@@ -950,9 +1040,41 @@
     <!-- Footer -->
     <div id="footer-placeholder"></div>
 
-    <!-- Dark Mode Toggle Script -->
-    <!-- Layout Script -->
-    <script src="./js/layout.js"></script>
+    <!-- Non-Critical Schemas - Loaded at end for performance -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How to View and Download Your KE Duplicate Bill Online – A Complete Guide",
+      "description": "Complete guide to accessing your K-Electric duplicate bill online, via WhatsApp, SMS, and more.",
+      "image": "https://keduplicatebill.com.pk/images/Ke-Duplicate-bill-View-Download.webp",
+      "author": {
+        "@type": "Organization",
+        "name": "KE Duplicate Bill"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "KE Duplicate Bill",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://keduplicatebill.com.pk/images/ke-duplicate-bill.webp"
+        }
+      },
+      "datePublished": "2025-11-20",
+      "dateModified": "2025-11-20"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{"@type":"Question","name":"Where can I find information about my Tariff on my K Electric bill?","acceptedAnswer":{"@type":"Answer","text":"You can easily locate details about your Tariff on your K Electric bill. Look under the Consumer Details section to find this information. For a deeper understanding, you can refer to the most recent applicable Tariff, which the Government of Pakistan officially declares. To access the latest Tariff structure, visit ke.com.pk/tariff-structure."}},{"@type":"Question","name":"Is K Electric Private?","acceptedAnswer":{"@type":"Answer","text":"Yes, K Electric is now owned by a private company. It used to be government-owned, but that changed in 2005. Now, the government only owns a small portion of the company, and most of it is owned by private businesses or individuals."}},{"@type":"Question","name":"What is the WhatsApp number for K Electric duplicate bill?","acceptedAnswer":{"@type":"Answer","text":"You can access your K Electric duplicate bill directly through their WhatsApp service! Save the helpline number (0348-0000118) and send "Hi" to initiate a chat. Once connected, simply request your duplicate bill and follow the prompts."}},{"@type":"Question","name":"Where can I find my K electric bill account number?","acceptedAnswer":{"@type":"Answer","text":"Your K Electric bill account number is a unique 13-digit identification code located prominently on your bill. It's typically found at the top of the bill or near your customer information section."}},{"@type":"Question","name":"Who is the CEO of K-Electric?","acceptedAnswer":{"@type":"Answer","text":"The current CEO of K-Electric is Syed Moonis Abdullah Alvi. Syed Moonis Abdullah Alvi has over 30 years of experience in finance. He joined K-Electric in 2008 and held key positions like CFO and Company Secretary before becoming CEO in 2018."}},{"@type":"Question","name":"How do I inquire about Net Metering?","acceptedAnswer":{"@type":"Answer","text":"For inquiries related to Net Metering, specifically designed for solar power generation, contact K Electric via email at net.metering@ke.com.pk."}},{"@type":"Question","name":"Where can I find my consumer number on my K Electric bill?","acceptedAnswer":{"@type":"Answer","text":"Your K Electric consumer number is an important 8-digit identification code located on your bill. Look for it near your customer information. The consumer number helps identify your specific account and service connection."}},{"@type":"Question","name":"What are the peak hours of electricity in Karachi?","acceptedAnswer":{"@type":"Answer","text":"K-Electric's peak hours in Karachi are: April to October: 6:30 PM to 10:30 PM, November to March: 6:00 PM to 10:00 PM"}},{"@type":"Question","name":"What are the peak hours for electricity in Pakistan?","acceptedAnswer":{"@type":"Answer","text":"Peak hours can vary across different regions in Pakistan. However, they generally occur in the late afternoon and early evening."}},{"@type":"Question","name":"What are off-peak hours for electricity?","acceptedAnswer":{"@type":"Answer","text":"Off-peak hours are the times of day when electricity demand is lowest. These are typically outside of peak hours, such as early morning and late night."}},{"@type":"Question","name":"Where is K-Electric headquarters?","acceptedAnswer":{"@type":"Answer","text":"The headquarters of K-Electric is located at KE House, 39-B, Sunset Boulevard, Phase-II, Defence Housing Authority, Karachi. You can reach K-Electric (formerly KESC) by calling 92-21-3263 7133 or 92-21-3870 9132. You can reach customer service by calling 118 or 99000."}},{"@type":"Question","name":"How do I check my electricity bill through SMS?","acceptedAnswer":{"@type":"Answer","text":"To check your K-Electric electricity bill through SMS, follow these steps: 1. Compose a New SMS: Open the messaging app on your phone. 2. Enter the Recipient Number: Type the K-Electric SMS service number (e.g., 8119). 3. Enter Your Account Number: Type your 13-digit K-Electric account number in the message body. 4. Send the SMS: Press send."}}]
+    }
+    </script>
+
+    <!-- Layout Script - Deferred for performance -->
+    <script src="./js/layout.js" defer></script>
 </body>
 
 </html>
