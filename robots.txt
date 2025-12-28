@@ -56,6 +56,7 @@ Disallow: /
 # ---------------------------
 User-agent: *
 Disallow: /*?_shtml
+Disallow: /cdn-cgi/
 
 Sitemap: https://keduplicatebill.com.pk/sitemap.xml
 # ---------------------------
