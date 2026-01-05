@@ -7,7 +7,24 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeScripts();
     initializeAdSense();
     initializeAnalytics();
+    initializeYearUpdater();
 });
+
+function initializeYearUpdater() {
+    const scripts = document.getElementsByTagName('script');
+    let prefix = './';
+    for (let script of scripts) {
+        if (script.src && script.src.includes('js/layout.js')) {
+            const src = script.getAttribute('src');
+            if (src.startsWith('../')) prefix = '../';
+            break;
+        }
+    }
+    const script = document.createElement('script');
+    script.src = prefix + "js/year-updater.js";
+    script.defer = true;
+    document.head.appendChild(script);
+}
 
 function initializeAdSense() {
     function loadAdSense() {
@@ -158,7 +175,7 @@ function injectLayout() {
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <p>&copy; 2025 کے ای ڈپلیکیٹ بل۔ تمام حقوق محفوظ ہیں۔ یہ ایک معلوماتی ویب سائٹ ہے اور کے الیکٹرک سے
+                    <p>&copy; <span class="dynamic-year">2026</span> کے ای ڈپلیکیٹ بل۔ تمام حقوق محفوظ ہیں۔ یہ ایک معلوماتی ویب سائٹ ہے اور کے الیکٹرک سے
                         منسلک نہیں ہے۔</p>
                 </div>
             </div>
@@ -273,7 +290,7 @@ function injectLayout() {
                         </div>
                     </div>
                     <div class="footer-bottom">
-                        <p>&copy; 2025 KE Duplicate Bill. All rights reserved. This is an informational website and not
+                        <p>&copy; <span class="dynamic-year">2026</span> KE Duplicate Bill. All rights reserved. This is an informational website and not
                             affiliated with K-Electric.</p>
                     </div>
                 </div>
