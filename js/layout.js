@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeAdSense();
     initializeAnalytics();
     initializeYearUpdater();
+    injectBackToTop();
+    injectSiteNavigationSchema();
 });
 
 function initializeYearUpdater() {
@@ -231,8 +233,10 @@ function injectLayout() {
                         <a href="${prefix}index.html">Home</a>
                         <a href="${prefix}electricity-bill-calculator/index.html">Bill Calculator</a>
                         <a href="${prefix}k-electric-schedule/index.html">KE Schedule</a>
-                        <a href="${prefix}sanctioned-load-k-electric/index.html">Sanctioned Load</a>
                         <a href="${prefix}about-us/index.html">About Us</a>
+                        <a href="${prefix}contact/index.html">Contact Us</a>
+                        <a href="${prefix}authors/index.html">Our Team</a>
+                        <a href="${prefix}sitemap/index.html">Sitemap</a>
                     </div>
                     <div>
                         <h3>KE Services</h3>
@@ -245,7 +249,8 @@ function injectLayout() {
                         <h3>More Info</h3>
                         <a href="${prefix}sanctioned-load-k-electric/index.html">Sanctioned Load</a>
                         <a href="${prefix}k-electric-refund/index.html">Refund Process</a>
-                        <a href="${prefix}terms-and-conditions/index.html">Terms & Conditions</a>
+                        <a href="${prefix}editorial-guidelines/index.html">Editorial Guidelines</a>
+                        <a href="${prefix}terms-and-conditions/index.html">Terms &amp; Conditions</a>
                         <a href="${prefix}privacy-policy/index.html">Privacy Policy</a>
                     </div>
 
@@ -303,6 +308,62 @@ function injectLayout() {
 
     // Highlight active link
     highlightActiveLink();
+}
+
+function injectBackToTop() {
+    const btn = document.createElement('button');
+    btn.id = 'back-to-top';
+    btn.innerHTML = '&#8679;';
+    btn.setAttribute('aria-label', 'Back to top');
+    btn.style.cssText = `
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 9999;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        transition: all 0.3s ease;
+    `;
+    document.body.appendChild(btn);
+
+    window.addEventListener('scroll', () => {
+        btn.style.display = window.scrollY > 400 ? 'flex' : 'none';
+    });
+
+    btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+function injectSiteNavigationSchema() {
+    const schema = {
+        "@context": "https://schema.org",
+        "@type": "SiteNavigationElement",
+        "name": ["Home", "Unit Price", "Load Shedding", "Bill Calculator", "Contact", "About Us", "Sitemap"],
+        "url": [
+            "https://keduplicatebill.com.pk/",
+            "https://keduplicatebill.com.pk/k-electric-unit-price/",
+            "https://keduplicatebill.com.pk/k-electric-load-shedding-schedule/",
+            "https://keduplicatebill.com.pk/electricity-bill-calculator/",
+            "https://keduplicatebill.com.pk/contact/",
+            "https://keduplicatebill.com.pk/about-us/",
+            "https://keduplicatebill.com.pk/sitemap/"
+        ]
+    };
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schema);
+    document.head.appendChild(script);
 }
 
 function initializeScripts() {
