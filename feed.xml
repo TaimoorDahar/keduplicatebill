@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>KE Duplicate Bill - K-Electric Guides &amp; Updates</title>
+    <link>https://keduplicatebill.com.pk/</link>
+    <description>Free guides to check, download and understand your K-Electric duplicate bill online. Latest KE tariff updates, load shedding schedules, and consumer tips for Karachi.</description>
+    <language>en-pk</language>
+    <copyright>Copyright 2026 KE Duplicate Bill</copyright>
+    <managingEditor>info@keduplicatebill.com.pk (Team KE Bill)</managingEditor>
+    <webMaster>info@keduplicatebill.com.pk (Team KE Bill)</webMaster>
+    <lastBuildDate>Wed, 19 Feb 2026 00:00:00 +0500</lastBuildDate>
+    <atom:link href="https://keduplicatebill.com.pk/feed.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://keduplicatebill.com.pk/images/ke-duplicate-bill.webp</url>
+      <title>KE Duplicate Bill</title>
+      <link>https://keduplicatebill.com.pk/</link>
+    </image>
+
+    <item>
+      <title>How to Check K-Electric Duplicate Bill Online 2026</title>
+      <link>https://keduplicatebill.com.pk/</link>
+      <description>Step-by-step guide to check, view and download your K-Electric duplicate bill online using your reference number. Updated for 2026 tariff rates.</description>
+      <pubDate>Wed, 19 Feb 2026 00:00:00 +0500</pubDate>
+      <guid isPermaLink="true">https://keduplicatebill.com.pk/</guid>
+      <dc:creator>Team KE Bill</dc:creator>
+    </item>
+
+    <item>
+      <title>K-Electric Unit Price &amp; Tariff Slabs 2026</title>
+      <link>https://keduplicatebill.com.pk/k-electric-unit-price/</link>
+      <description>Complete breakdown of K-Electric unit prices, tariff slabs, fuel cost adjustments, and taxes for residential and commercial consumers in 2026.</description>
+      <pubDate>Wed, 19 Feb 2026 00:00:00 +0500</pubDate>
+      <guid isPermaLink="true">https://keduplicatebill.com.pk/k-electric-unit-price/</guid>
+      <dc:creator>Team KE Bill</dc:creator>
+    </item>
+
+    <item>
+      <title>K-Electric Load Shedding Schedule by Area 2026</title>
+      <link>https://keduplicatebill.com.pk/k-electric-load-shedding-schedule/</link>
+      <description>Check your area's K-Electric load shedding schedule. Find out how many hours of outages your neighbourhood faces and why.</description>
+      <pubDate>Wed, 19 Feb 2026 00:00:00 +0500</pubDate>
+      <guid isPermaLink="true">https://keduplicatebill.com.pk/k-electric-load-shedding-schedule/</guid>
+      <dc:creator>Team KE Bill</dc:creator>
+    </item>
+
+    <item>
+      <title>Electricity Bill Calculator - Estimate Your KE Bill</title>
+      <link>https://keduplicatebill.com.pk/electricity-bill-calculator/</link>
+      <description>Use our free K-Electric bill calculator to estimate your monthly electricity bill based on your unit consumption and applicable tariff slab.</description>
+      <pubDate>Wed, 19 Feb 2026 00:00:00 +0500</pubDate>
+      <guid isPermaLink="true">https://keduplicatebill.com.pk/electricity-bill-calculator/</guid>
+      <dc:creator>Team KE Bill</dc:creator>
+    </item>
+
+    <item>
+      <title>K-Electric Net Metering Guide for Solar Panels 2026</title>
+      <link>https://keduplicatebill.com.pk/k-electric-net-metering/</link>
+      <description>Complete guide to K-Electric net metering for solar panel owners in Karachi. Learn how to apply, eligibility, and how to earn credits on your bill.</description>
+      <pubDate>Wed, 19 Feb 2026 00:00:00 +0500</pubDate>
+      <guid isPermaLink="true">https://keduplicatebill.com.pk/k-electric-net-metering/</guid>
+      <dc:creator>Team KE Bill</dc:creator>
+    </item>
+
+    <item>
+      <title>How to Apply for K-Electric New Connection Online</title>
+      <link>https://keduplicatebill.com.pk/k-electric-new-connection-online/</link>
+      <description>Step-by-step process to apply for a new K-Electric connection online. Documents required, fees, and timeline explained.</description>
+      <pubDate>Wed, 19 Feb 2026 00:00:00 +0500</pubDate>
+      <guid isPermaLink="true">https://keduplicatebill.com.pk/k-electric-new-connection-online/</guid>
+      <dc:creator>Team KE Bill</dc:creator>
+    </item>
+
+    <item>
+      <title>K-Electric Payment Methods - How to Pay Your Bill</title>
+      <link>https://keduplicatebill.com.pk/k-electric-payment-methods/</link>
+      <description>All K-Electric bill payment methods including online banking, JazzCash, Easypaisa, ATM, and physical payment centres in Karachi.</description>
+      <pubDate>Wed, 19 Feb 2026 00:00:00 +0500</pubDate>
+      <guid isPermaLink="true">https://keduplicatebill.com.pk/k-electric-payment-methods/</guid>
+      <dc:creator>Team KE Bill</dc:creator>
+    </item>
+
+    <item>
+      <title>Energy Saving Tips to Reduce Your KE Electricity Bill</title>
+      <link>https://keduplicatebill.com.pk/energy-saving-tips/</link>
+      <description>Practical energy saving tips for Karachi residents to reduce their K-Electric electricity bill. Appliance usage, peak hours, and smart usage strategies.</description>
+      <pubDate>Wed, 19 Feb 2026 00:00:00 +0500</pubDate>
+      <guid isPermaLink="true">https://keduplicatebill.com.pk/energy-saving-tips/</guid>
+      <dc:creator>Team KE Bill</dc:creator>
+    </item>
+
+  </channel>
+</rss>

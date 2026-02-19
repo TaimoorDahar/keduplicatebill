@@ -10,7 +10,17 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeYearUpdater();
     injectBackToTop();
     injectSiteNavigationSchema();
+    injectRSSLink();
 });
+
+function injectRSSLink() {
+    const link = document.createElement('link');
+    link.rel = 'alternate';
+    link.type = 'application/rss+xml';
+    link.title = 'KE Duplicate Bill RSS Feed';
+    link.href = 'https://keduplicatebill.com.pk/feed.xml';
+    document.head.appendChild(link);
+}
 
 function initializeYearUpdater() {
     const scripts = document.getElementsByTagName('script');
