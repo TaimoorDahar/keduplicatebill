@@ -1,5 +1,8 @@
-# Cloudflare Pages Redirects
-# Format: old-path  new-path  status-code
+# K-Electric schedule redirect
+/k-electric-schedule/           /k-electric-load-shedding-schedule/     301
+/k-electric-schedule            /k-electric-load-shedding-schedule/     301
+/k-electric-schedule/index.html /k-electric-load-shedding-schedule/     301
 
-/k-electric-schedule/          /k-electric-load-shedding-schedule/     301
-/k-electric-schedule           /k-electric-load-shedding-schedule/     301
+# Remove all category pages (SEO cleanup)
+/category/     /     410
+/category/*    /     410
