@@ -1,0 +1,5 @@
+# Cloudflare Pages Redirects
+# Format: old-path  new-path  status-code
+
+/k-electric-schedule/          /k-electric-load-shedding-schedule/     301
+/k-electric-schedule           /k-electric-load-shedding-schedule/     301

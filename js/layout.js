@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeScripts();
     initializeAdSense();
     initializeAnalytics();
-    initializeYearUpdater();
     injectBackToTop();
     injectSiteNavigationSchema();
     injectRSSLink();
@@ -20,22 +19,6 @@ function injectRSSLink() {
     link.title = 'KE Duplicate Bill RSS Feed';
     link.href = 'https://keduplicatebill.com.pk/feed.xml';
     document.head.appendChild(link);
-}
-
-function initializeYearUpdater() {
-    const scripts = document.getElementsByTagName('script');
-    let prefix = './';
-    for (let script of scripts) {
-        if (script.src && script.src.includes('js/layout.js')) {
-            const src = script.getAttribute('src');
-            if (src.startsWith('../')) prefix = '../';
-            break;
-        }
-    }
-    const script = document.createElement('script');
-    script.src = prefix + "js/year-updater.js";
-    script.defer = true;
-    document.head.appendChild(script);
 }
 
 function initializeAdSense() {
@@ -164,7 +147,7 @@ function injectLayout() {
                         <h3>فوری لنکس</h3>
                         <a href="../ur/index.html">ہوم</a>
                         <a href="../electricity-bill-calculator/index.html">بل کیلکولیٹر</a>
-                        <a href="../k-electric-schedule/index.html">کے ای شیڈول</a>
+                        <a href="../k-electric-load-shedding-schedule/index.html">کے ای شیڈول</a>
                         <a href="../sanctioned-load-k-electric/index.html">منظور شدہ لوڈ</a>
                     </div>
                     <div>
@@ -242,7 +225,7 @@ function injectLayout() {
                         <h3>Quick Links</h3>
                         <a href="${prefix}index.html">Home</a>
                         <a href="${prefix}electricity-bill-calculator/index.html">Bill Calculator</a>
-                        <a href="${prefix}k-electric-schedule/index.html">KE Schedule</a>
+                        <a href="${prefix}k-electric-load-shedding-schedule/index.html">Load Shedding Schedule</a>
                         <a href="${prefix}about-us/index.html">About Us</a>
                         <a href="${prefix}contact/index.html">Contact Us</a>
                         <a href="${prefix}authors/index.html">Our Team</a>
@@ -253,7 +236,7 @@ function injectLayout() {
                         <a href="${prefix}k-electric-new-connection-online/index.html">New Connection</a>
                         <a href="${prefix}k-electric-payment-methods/index.html">Payment Methods</a>
                         <a href="${prefix}k-electric-helpline-numbers/index.html">Helpline Numbers</a>
-                        <a href="${prefix}k-electric-schedule/index.html">KE Schedule</a>
+                        <a href="${prefix}k-electric-load-shedding-schedule/index.html">Load Shedding Schedule</a>
                     </div>
                     <div>
                         <h3>More Info</h3>
