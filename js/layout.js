@@ -107,7 +107,7 @@ function injectLayout() {
         <header class="header">
             <div class="container">
                 <div class="header-content">
-                    <a href="../index.html" class="logo">
+                    <a href="../" class="logo">
                         <img src="../images/ke-duplicate-bill.webp" alt="KE Duplicate Bill">
                     </a>
 
@@ -121,8 +121,8 @@ function injectLayout() {
                     </button>
 
                     <nav class="nav" id="nav-menu">
-                        <a href="../ur/index.html">ہوم</a>
-                        <a href="../index.html">English</a>
+                        <a href="../ur/">ہوم</a>
+                        <a href="../">English</a>
                         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
                             <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
                                 <path
@@ -145,22 +145,22 @@ function injectLayout() {
                 <div class="footer-content">
                     <div>
                         <h3>فوری لنکس</h3>
-                        <a href="../ur/index.html">ہوم</a>
-                        <a href="../electricity-bill-calculator/index.html">بل کیلکولیٹر</a>
-                        <a href="../k-electric-load-shedding-schedule/index.html">کے ای شیڈول</a>
-                        <a href="../sanctioned-load-k-electric/index.html">منظور شدہ لوڈ</a>
+                        <a href="../ur/">ہوم</a>
+                        <a href="../electricity-bill-calculator/">بل کیلکولیٹر</a>
+                        <a href="../k-electric-load-shedding-schedule/">کے ای شیڈول</a>
+                        <a href="../sanctioned-load-k-electric/">منظور شدہ لوڈ</a>
                     </div>
                     <div>
                         <h3>وسائل</h3>
-                        <a href="../k-electric-new-connection-online/index.html">نیا کنکشن</a>
-                        <a href="../k-electric-refund/index.html">کے ای ریفنڈ</a>
-                        <a href="../terms-and-conditions/index.html">شرائط و ضوابط</a>
-                        <a href="../privacy-policy/index.html">رازداری کی پالیسی</a>
+                        <a href="../k-electric-new-connection-online/">نیا کنکشن</a>
+                        <a href="../k-electric-refund/">کے ای ریفنڈ</a>
+                        <a href="../terms-and-conditions/">شرائط و ضوابط</a>
+                        <a href="../privacy-policy/">رازداری کی پالیسی</a>
                     </div>
                     <div>
                         <h3>زبان</h3>
-                        <a href="../index.html">English</a>
-                        <a href="../ur/index.html">اردو</a>
+                        <a href="../">English</a>
+                        <a href="../ur/">اردو</a>
                     </div>
                     <div>
                         <h3>کے ای سے رابطہ</h3>
@@ -182,7 +182,7 @@ function injectLayout() {
         <header class="header">
             <div class="container">
                 <div class="header-content">
-                    <a href="${prefix}index.html" class="logo">
+                    <a href="${prefix}" class="logo">
                         <img src="${prefix}images/ke-duplicate-bill.webp" alt="KE Duplicate Bill">
                     </a>
 
@@ -196,12 +196,12 @@ function injectLayout() {
                     </button>
 
                     <nav class="nav" id="nav-menu">
-                        <a href="${prefix}index.html">Home</a>
-                        <a href="${prefix}k-electric-unit-price/index.html">Unit Price</a>
-                        <a href="${prefix}k-electric-load-shedding-schedule/index.html">Load Shedding</a>
-                        <a href="${prefix}electricity-bill-calculator/index.html">Calculator</a>
-                        <a href="${prefix}k-electric-helpline-numbers/index.html">Contact</a>
-                        <a href="${prefix}ur/index.html">اردو</a>
+                        <a href="${prefix}">Home</a>
+                        <a href="${prefix}k-electric-unit-price/">Unit Price</a>
+                        <a href="${prefix}k-electric-load-shedding-schedule/">Load Shedding</a>
+                        <a href="${prefix}electricity-bill-calculator/">Calculator</a>
+                        <a href="${prefix}k-electric-helpline-numbers/">Contact</a>
+                        <a href="${prefix}ur/">اردو</a>
                         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
                             <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
                                 <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" />
@@ -223,28 +223,28 @@ function injectLayout() {
                 <div class="footer-content">
                     <div>
                         <h3>Quick Links</h3>
-                        <a href="${prefix}index.html">Home</a>
-                        <a href="${prefix}electricity-bill-calculator/index.html">Bill Calculator</a>
-                        <a href="${prefix}k-electric-load-shedding-schedule/index.html">Load Shedding Schedule</a>
-                        <a href="${prefix}about-us/index.html">About Us</a>
-                        <a href="${prefix}contact/index.html">Contact Us</a>
-                        <a href="${prefix}authors/index.html">Our Team</a>
-                        <a href="${prefix}sitemap/index.html">Sitemap</a>
+                        <a href="${prefix}">Home</a>
+                        <a href="${prefix}electricity-bill-calculator/">Bill Calculator</a>
+                        <a href="${prefix}k-electric-load-shedding-schedule/">Load Shedding Schedule</a>
+                        <a href="${prefix}about-us/">About Us</a>
+                        <a href="${prefix}contact/">Contact Us</a>
+                        <a href="${prefix}authors/">Our Team</a>
+                        <a href="${prefix}sitemap/">Sitemap</a>
                     </div>
                     <div>
                         <h3>KE Services</h3>
-                        <a href="${prefix}k-electric-new-connection-online/index.html">New Connection</a>
-                        <a href="${prefix}k-electric-payment-methods/index.html">Payment Methods</a>
-                        <a href="${prefix}k-electric-helpline-numbers/index.html">Helpline Numbers</a>
-                        <a href="${prefix}k-electric-load-shedding-schedule/index.html">Load Shedding Schedule</a>
+                        <a href="${prefix}k-electric-new-connection-online/">New Connection</a>
+                        <a href="${prefix}k-electric-payment-methods/">Payment Methods</a>
+                        <a href="${prefix}k-electric-helpline-numbers/">Helpline Numbers</a>
+                        <a href="${prefix}k-electric-load-shedding-schedule/">Load Shedding Schedule</a>
                     </div>
                     <div>
                         <h3>More Info</h3>
-                        <a href="${prefix}sanctioned-load-k-electric/index.html">Sanctioned Load</a>
-                        <a href="${prefix}k-electric-refund/index.html">Refund Process</a>
-                        <a href="${prefix}editorial-guidelines/index.html">Editorial Guidelines</a>
-                        <a href="${prefix}terms-and-conditions/index.html">Terms &amp; Conditions</a>
-                        <a href="${prefix}privacy-policy/index.html">Privacy Policy</a>
+                        <a href="${prefix}sanctioned-load-k-electric/">Sanctioned Load</a>
+                        <a href="${prefix}k-electric-refund/">Refund Process</a>
+                        <a href="${prefix}editorial-guidelines/">Editorial Guidelines</a>
+                        <a href="${prefix}terms-and-conditions/">Terms &amp; Conditions</a>
+                        <a href="${prefix}privacy-policy/">Privacy Policy</a>
                     </div>
 
                     <div>
@@ -392,7 +392,7 @@ function highlightActiveLink() {
         // Simple check: if current path contains the href (minus the ./ prefix)
         const cleanHref = href.replace(/^\.\//, '').replace(/^\.\.\//, '');
 
-        if (currentPath.endsWith(cleanHref)) {
+        if (currentPath.endsWith(cleanHref) || currentPath.endsWith(cleanHref.replace('index.html', ''))) {
             link.classList.add('active');
         }
 
