@@ -91,11 +91,10 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Smooth transitions for theme switching */
-*,
-*::before,
-*::after {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+/* Targeted theme transitions — never on * which causes forced repaints */
+.header, .card, .bill-checker, .bill-checker-card, .nav, .footer,
+[data-theme] body, [data-theme] .hero {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 
@@ -609,6 +608,11 @@ li {
   }
 }
 
+/* Scroll offset for sticky header on anchor links */
+[id] {
+  scroll-margin-top: 80px;
+}
+
 /* Article Styling */
 article {
   max-width: 900px;
@@ -620,6 +624,12 @@ article img {
   height: auto;
   border-radius: var(--radius-md);
   margin: var(--spacing-md) 0;
+}
+
+@media (max-width: 768px) {
+  article p, article li {
+    line-height: 1.75;
+  }
 }
 
 /* Forms */
@@ -754,30 +764,26 @@ iframe {
 
 
 
-/* Responsive adjustments for iframe - Taller on mobile/tablet */
+/* Responsive iframe — constrained height keeps ads and content in view */
 @media (max-width: 480px) {
   .iframe-container {
-    height: auto;
-    min-height: 1517px;
-    /* Extreme height to ensure no cutoff */
-    padding-bottom: 50px;
+    height: 580px;
+    min-height: 580px;
+    padding-bottom: 0;
   }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
   .iframe-container {
-    height: auto;
-    min-height: 4500px;
-    /* Extreme height for tablets too */
+    height: 700px;
+    min-height: 700px;
   }
 }
 
-
 @media (min-width: 769px) and (max-width: 1024px) {
   .iframe-container {
-    height: 110vh;
-    /* Slightly taller on tablets */
-    min-height: 700px;
+    height: 90vh;
+    min-height: 600px;
   }
 }
 
