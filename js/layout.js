@@ -22,20 +22,13 @@ function injectRSSLink() {
 }
 
 function initializeAdSense() {
-    function loadAdSense() {
-        if (document.getElementById('google-adsense')) return;
-        var script = document.createElement('script');
-        script.id = 'google-adsense';
-        script.async = true;
-        script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8161470337922791";
-        script.crossOrigin = "anonymous";
-        document.head.appendChild(script);
-    }
-    document.addEventListener('click', loadAdSense, { once: true });
-    document.addEventListener('scroll', loadAdSense, { once: true });
-    document.addEventListener('mousemove', loadAdSense, { once: true });
-    document.addEventListener('touchstart', loadAdSense, { once: true });
-    document.addEventListener('keydown', loadAdSense, { once: true });
+    if (document.getElementById('google-adsense')) return;
+    var script = document.createElement('script');
+    script.id = 'google-adsense';
+    script.async = true;
+    script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8161470337922791";
+    script.crossOrigin = "anonymous";
+    document.head.appendChild(script);
 }
 
 function initializeAnalytics() {
