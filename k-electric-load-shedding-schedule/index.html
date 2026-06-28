@@ -40,6 +40,47 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="../css/style.css">
 
+    <style>
+        .ke-note-warning {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            color: #856404;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        .ke-note-success {
+            background-color: #d4edda;
+            border-left: 4px solid #00c853;
+            color: #155724;
+        }
+        .ke-inline-note {
+            background-color: #fff3cd;
+            border-radius: 8px;
+            padding: 0.75rem;
+            margin-top: 1rem;
+            color: #856404;
+        }
+        [data-theme="dark"] .ke-note-warning {
+            background-color: #2d2000 !important;
+            border-color: #f59e0b !important;
+            color: #fcd34d !important;
+        }
+        [data-theme="dark"] .ke-note-success {
+            background-color: #0a2218 !important;
+            border-color: #059669 !important;
+            color: #6ee7b7 !important;
+        }
+        [data-theme="dark"] .ke-note-success p,
+        [data-theme="dark"] .ke-note-success li {
+            color: #6ee7b7 !important;
+        }
+        [data-theme="dark"] .ke-inline-note {
+            background-color: #2d2000 !important;
+            color: #fcd34d !important;
+        }
+    </style>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -190,7 +231,7 @@
 
                 <!-- Quick Status Checker -->
                 <section class="content-section">
-                    <h2>⚡ Quick Load Shedding Status Check</h2>
+                    <h2>Quick Load Shedding Status Check</h2>
 
                     <div
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
@@ -220,7 +261,7 @@
 
                 <!-- Area-Wise Schedule -->
                 <section class="content-section">
-                    <h2>📍 K-Electric Area-Wise Load Shedding Schedule</h2>
+                    <h2>K-Electric Area-Wise Load Shedding Schedule</h2>
 
                     <p>K-Electric divides Karachi into <strong>three categories</strong> based on recovery rates and
                         infrastructure:</p>
@@ -358,9 +399,8 @@
                             </tbody>
                         </table>
 
-                        <div
-                            style="background-color: #fff3cd; padding: 1rem; border-radius: var(--radius-md); margin-top: 1rem; border-left: 4px solid #ffc107; color: #856404;">
-                            <p><strong>⚠️ Important:</strong> High-loss areas face extended outages due to low bill
+                        <div class="ke-note-warning">
+                            <p><strong>Important:</strong> High-loss areas face extended outages due to low bill
                                 recovery rates and high electricity theft. Improving area recovery can reduce load
                                 shedding duration.</p>
                         </div>
@@ -369,7 +409,7 @@
 
                 <!-- How to Check -->
                 <section class="content-section">
-                    <h2>📱 How to Check Your Area's Load Shedding Schedule</h2>
+                    <h2>How to Check Your Area's Load Shedding Schedule</h2>
 
                     <p>K-Electric provides multiple ways to check your area's current and upcoming <strong>load shedding
                             timings</strong>:</p>
@@ -377,10 +417,10 @@
                     <div class="card">
                         <h3>Method 1: KE Website</h3>
                         <ol style="line-height: 2;">
-                            <li>Visit <strong>www.ke.com.pk</strong></li>
-                            <li>Click on "Power Status" or "Outage Updates"</li>
-                            <li>Enter your area name or feeder code</li>
-                            <li>View real-time schedule and updates</li>
+                            <li>Visit <strong>ke.com.pk/load-shed-schedule/</strong></li>
+                            <li>Enter your account number starting with <strong>4000XXXXXXXXX</strong></li>
+                            <li>View your feeder name, cycle, and schedule timings</li>
+                            <li>Download the PDF schedule (updated June 2026)</li>
                         </ol>
                     </div>
 
@@ -428,7 +468,7 @@
 
                 <!-- Factors Affecting Schedule -->
                 <section class="content-section">
-                    <h2>⚙️ Factors Affecting Your Area's Load Shedding Duration</h2>
+                    <h2>Factors Affecting Your Area's Load Shedding Duration</h2>
 
                     <p>Understanding why some areas face more load shedding helps you take action to improve your
                         neighborhood's status:</p>
@@ -509,7 +549,7 @@
 
                 <!-- Scheduled vs Unscheduled -->
                 <section class="content-section">
-                    <h2>🔄 Scheduled vs Unscheduled Load Shedding</h2>
+                    <h2>Scheduled vs Unscheduled Load Shedding</h2>
 
                     <p>It's important to distinguish between planned and unexpected outages:</p>
 
@@ -537,8 +577,7 @@
                                 <li><strong>Weather Related:</strong> Rain, storms, flooding</li>
                                 <li><strong>Emergency:</strong> Grid station failure</li>
                             </ul>
-                            <p
-                                style="margin-top: 1rem; padding: 0.75rem; background-color: #fff3cd; border-radius: var(--radius-md);">
+                            <p class="ke-inline-note">
                                 <strong>Response:</strong> KE teams work to restore ASAP (1-4 hours typically)
                             </p>
                         </div>
@@ -557,7 +596,7 @@
 
                 <!-- Reduce Load Shedding -->
                 <section class="content-section">
-                    <h2>✅ How to Reduce Load Shedding in Your Area</h2>
+                    <h2>How to Reduce Load Shedding in Your Area</h2>
 
                     <p>Communities can work together to improve their area's status and reduce power cuts:</p>
 
@@ -579,9 +618,8 @@
                         </ol>
                     </div>
 
-                    <div class="card mt-3"
-                        style="background-color: #d4edda; border-left: 4px solid var(--secondary); color: #155724;">
-                        <h4>📈 Success Stories</h4>
+                    <div class="card mt-3 ke-note-success">
+                        <h4>Success Stories</h4>
                         <p>Several Karachi neighborhoods have <strong>upgraded from high-loss to low-loss
                                 category</strong> through coordinated efforts:</p>
                         <ul style="line-height: 2;">
@@ -597,7 +635,7 @@
 
                 <!-- Maintenance Schedule -->
                 <section class="content-section">
-                    <h2>🔧 K-Electric Maintenance Shutdowns</h2>
+                    <h2>K-Electric Maintenance Shutdowns</h2>
 
                     <p>Apart from load shedding, KE conducts <strong>planned maintenance shutdowns</strong> for
                         infrastructure upgrades:</p>
@@ -667,7 +705,7 @@
 
                 <!-- Related Resources -->
                 <section class="content-section">
-                    <h2>🔗 Related K-Electric Resources</h2>
+                    <h2>Related K-Electric Resources</h2>
 
                     <div
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
@@ -693,7 +731,7 @@
 
                 <!-- FAQs -->
                 <section class="content-section">
-                    <h2>❓ Frequently Asked Questions</h2>
+                    <h2>Frequently Asked Questions</h2>
 
                     <div class="faq-container" style="margin-top: 1.5rem;">
                         <div class="card">
@@ -742,7 +780,7 @@
 
                 <!-- Conclusion -->
                 <section class="content-section">
-                    <h2>📌 Final Thoughts</h2>
+                    <h2>Final Thoughts</h2>
 
                     <p>Understanding the <strong>K-Electric load shedding schedule</strong> helps you plan your daily
                         activities better. Remember that your area's category is not permanent - communities can work
