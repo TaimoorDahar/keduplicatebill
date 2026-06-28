@@ -765,8 +765,8 @@ iframe {
 }
 
 @media (max-width: 700px) {
-  .iframe-container { min-height: 1450px; }
-  .iframe-container iframe { min-height: 1450px !important; }
+  .iframe-container { min-height: 1500px; }
+  .iframe-container iframe { min-height: 1500px !important; }
 }
 
 
