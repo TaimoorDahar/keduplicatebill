@@ -78,6 +78,19 @@
             background-color: #2d2000 !important;
             color: #fcd34d !important;
         }
+        .ke-status-card { text-align: center; }
+        .ke-status-card-green { background: linear-gradient(135deg, #00c853 0%, #00e676 100%); color: white; }
+        .ke-status-card-yellow { background: linear-gradient(135deg, #ffc107 0%, #ffeb3b 100%); color: #1a1a2e; }
+        .ke-status-card-orange { background: linear-gradient(135deg, #ff6b35 0%, #ff8a65 100%); color: white; }
+        [data-theme="dark"] .ke-status-card-green { background: #062010 !important; border: 2px solid #22c55e !important; }
+        [data-theme="dark"] .ke-status-card-green h3,
+        [data-theme="dark"] .ke-status-card-green p { color: #6ee7b7 !important; }
+        [data-theme="dark"] .ke-status-card-yellow { background: #2d2000 !important; border: 2px solid #f59e0b !important; }
+        [data-theme="dark"] .ke-status-card-yellow h3,
+        [data-theme="dark"] .ke-status-card-yellow p { color: #fcd34d !important; }
+        [data-theme="dark"] .ke-status-card-orange { background: #2d1000 !important; border: 2px solid #f97316 !important; }
+        [data-theme="dark"] .ke-status-card-orange h3,
+        [data-theme="dark"] .ke-status-card-orange p { color: #fdba74 !important; }
     </style>
 
     <!-- Google Fonts -->
@@ -253,23 +266,20 @@
 
                     <div
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-                        <div class="card"
-                            style="text-align: center; background: linear-gradient(135deg, #00c853 0%, #00e676 100%); color: white;">
-                            <h3>✅ Exempt Areas</h3>
+                        <div class="card ke-status-card ke-status-card-green">
+                            <h3>Exempt Areas</h3>
                             <p style="font-size: 2rem; font-weight: bold; margin: 1rem 0;">0 Hours</p>
                             <p>No Load Shedding</p>
                             <p style="font-size: 0.9rem; margin-top: 1rem;">DHA, Clifton, Protected Feeders</p>
                         </div>
-                        <div class="card"
-                            style="text-align: center; background: linear-gradient(135deg, #ffc107 0%, #ffeb3b 100%); color: #1a1a2e;">
-                            <h3>⚠️ Low-Loss Areas</h3>
+                        <div class="card ke-status-card ke-status-card-yellow">
+                            <h3>Low-Loss Areas</h3>
                             <p style="font-size: 2rem; font-weight: bold; margin: 1rem 0;">2-4 Hours</p>
                             <p>Moderate Outages</p>
                             <p style="font-size: 0.9rem; margin-top: 1rem;">PECHS, North Nazimabad, Johar</p>
                         </div>
-                        <div class="card"
-                            style="text-align: center; background: linear-gradient(135deg, #ff6b35 0%, #ff8a65 100%); color: white;">
-                            <h3>🔴 High-Loss Areas</h3>
+                        <div class="card ke-status-card ke-status-card-orange">
+                            <h3>High-Loss Areas</h3>
                             <p style="font-size: 2rem; font-weight: bold; margin: 1rem 0;">6-8 Hours</p>
                             <p>Extended Outages</p>
                             <p style="font-size: 0.9rem; margin-top: 1rem;">Orangi, Malir, Korangi Industrial</p>
@@ -285,7 +295,7 @@
                         infrastructure:</p>
 
                     <div class="card">
-                        <h3 style="color: var(--secondary);">🟢 Category A: Zero Load Shedding (Exempt Areas)</h3>
+                        <h3 style="color: var(--secondary);">Category A: Zero Load Shedding (Exempt Areas)</h3>
                         <p><strong>Recovery Rate:</strong> 95-100% | <strong>Daily Outage:</strong> 0 Hours</p>
 
                         <h4 style="margin-top: 1.5rem;">Exempt Localities:</h4>
@@ -313,7 +323,7 @@
                     </div>
 
                     <div class="card mt-3">
-                        <h3 style="color: #ffc107;">⚠️ Category B: Moderate Load Shedding (Low-Loss Areas)</h3>
+                        <h3 style="color: #ffc107;">Category B: Moderate Load Shedding (Low-Loss Areas)</h3>
                         <p><strong>Recovery Rate:</strong> 70-94% | <strong>Daily Outage:</strong> 2-4 Hours</p>
 
                         <h4 style="margin-top: 1.5rem;">Affected Localities:</h4>
@@ -363,7 +373,7 @@
                     </div>
 
                     <div class="card mt-3">
-                        <h3 style="color: var(--accent);">🔴 Category C: Extended Load Shedding (High-Loss Areas)</h3>
+                        <h3 style="color: var(--accent);">Category C: Extended Load Shedding (High-Loss Areas)</h3>
                         <p><strong>Recovery Rate:</strong> Below 70% | <strong>Daily Outage:</strong> 6-8 Hours</p>
 
                         <h4 style="margin-top: 1.5rem;">Affected Localities:</h4>
@@ -574,7 +584,7 @@
                     <div
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
                         <div class="card">
-                            <h3>⏰ Scheduled Load Shedding</h3>
+                            <h3>Scheduled Load Shedding</h3>
                             <ul style="line-height: 2;">
                                 <li><strong>Predictable:</strong> Fixed daily timings</li>
                                 <li><strong>NEPRA Approved:</strong> Based on area category</li>
@@ -588,7 +598,7 @@
                         </div>
 
                         <div class="card">
-                            <h3>⚡ Unscheduled Outages</h3>
+                            <h3>Unscheduled Outages</h3>
                             <ul style="line-height: 2;">
                                 <li><strong>Unpredictable:</strong> No fixed timing</li>
                                 <li><strong>Technical Issues:</strong> Faults, tripping, overload</li>
@@ -603,7 +613,7 @@
 
                     <div class="card mt-3"
                         style="background-color: var(--bg-light); border-left: 4px solid var(--primary);">
-                        <h4>💡 How to Identify:</h4>
+                        <h4>How to Identify:</h4>
                         <p><strong>Scheduled:</strong> If outage occurs during your area's regular timing = Planned</p>
                         <p><strong>Unscheduled:</strong> If power goes off outside regular schedule = Technical fault
                         </p>
@@ -728,18 +738,18 @@
                     <div
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
                         <div class="card" style="text-align: center;">
-                            <h4>📄 Duplicate Bill</h4>
+                            <h4>Duplicate Bill</h4>
                             <p>Download your KE bill online</p>
                             <a href="../" style="color: var(--primary); font-weight: 600;">Get Bill →</a>
                         </div>
                         <div class="card" style="text-align: center;">
-                            <h4>💰 Unit Prices</h4>
+                            <h4>Unit Prices</h4>
                             <p>Check electricity tariff rates</p>
                             <a href="../k-electric-unit-price/"
                                 style="color: var(--primary); font-weight: 600;">View Rates →</a>
                         </div>
                         <div class="card" style="text-align: center;">
-                            <h4>🧮 Bill Calculator</h4>
+                            <h4>Bill Calculator</h4>
                             <p>Estimate your monthly bill</p>
                             <a href="../electricity-bill-calculator/"
                                 style="color: var(--primary); font-weight: 600;">Calculate →</a>
