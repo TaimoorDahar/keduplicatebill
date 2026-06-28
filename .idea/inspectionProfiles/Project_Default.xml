@@ -1,0 +1,62 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyInterpreterInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="asgiref" />
+          <option value="cachetools" />
+          <option value="certifi" />
+          <option value="charset-normalizer" />
+          <option value="Django" />
+          <option value="django-cors-headers" />
+          <option value="django-js-asset" />
+          <option value="django-mptt" />
+          <option value="django-storages" />
+          <option value="django-tinymce" />
+          <option value="django-user-agents" />
+          <option value="djangorestframework" />
+          <option value="google-api-core" />
+          <option value="google-auth" />
+          <option value="google-cloud-core" />
+          <option value="google-cloud-storage" />
+          <option value="google-crc32c" />
+          <option value="google-resumable-media" />
+          <option value="googleapis-common-protos" />
+          <option value="idna" />
+          <option value="Pillow" />
+          <option value="proto-plus" />
+          <option value="protobuf" />
+          <option value="psycopg2" />
+          <option value="pyasn1" />
+          <option value="pyasn1_modules" />
+          <option value="python-dotenv" />
+          <option value="pytz" />
+          <option value="requests" />
+          <option value="rsa" />
+          <option value="sqlparse" />
+          <option value="stripe" />
+          <option value="typing_extensions" />
+          <option value="ua-parser" />
+          <option value="urllib3" />
+          <option value="user-agents" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyStubPackagesAdvertiser" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="djangorestframework" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="requests.models.Response.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
