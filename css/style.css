@@ -775,7 +775,7 @@ iframe {
 
 @media (min-width: 481px) and (max-width: 768px) {
   .iframe-container {
-    height: 700px;
+    height: 1200px;
     min-height: 700px;
   }
 }
