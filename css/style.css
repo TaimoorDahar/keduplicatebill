@@ -678,7 +678,7 @@ iframe {
 .iframe-container iframe {
   width: 100%;
   min-height: 850px;
-  overflow-y: auto;
+  overflow: hidden;
   border: 0;
   border-radius: var(--radius-lg);
   display: block;
