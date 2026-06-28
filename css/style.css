@@ -767,7 +767,7 @@ iframe {
 /* Responsive iframe — constrained height keeps ads and content in view */
 @media (max-width: 480px) {
   .iframe-container {
-    height: 580px;
+    height: 1200px;
     min-height: 580px;
     padding-bottom: 0;
   }
