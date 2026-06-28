@@ -35,6 +35,12 @@
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .ke-cost-note { background-color: #fff3cd; border-left: 4px solid #ffc107; }
+        [data-theme="dark"] .ke-cost-note { background-color: #2d2000 !important; border-color: #f59e0b !important; }
+        [data-theme="dark"] .ke-cost-note h4 { color: #fcd34d !important; }
+        [data-theme="dark"] .ke-cost-note li { color: #fde68a !important; }
+    </style>
 
     <script type="application/ld+json">
     {
@@ -354,8 +360,8 @@
                         </table>
                     </div>
 
-                    <div class="card mt-3" style="background-color: #fff3cd; border-left: 4px solid #ffc107;">
-                        <h4>💡 Cost Breakdown Includes:</h4>
+                    <div class="card mt-3 ke-cost-note">
+                        <h4>Cost Breakdown Includes:</h4>
                         <ul style="line-height: 2;">
                             <li>Security deposit (refundable when closing connection)</li>
                             <li>Service connection charges</li>
