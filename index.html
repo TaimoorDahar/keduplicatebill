@@ -418,13 +418,74 @@
 
     <section class="hero">
         <div class="container">
-            <h1>KE Duplicate Bill – Check Your K-Electric Bill Online</h1>
+            <h1>KE Duplicate Bill – Manage & Calculate Your K-Electric Bill</h1>
+            <p style="color: #fff; font-size: 1.1rem; max-width: 600px; margin: 0 auto; opacity: 0.9;">Your independent guide to understanding electricity tariffs, estimating monthly costs, and securely checking your duplicate bills in Karachi.</p>
         </div>
     </section>
 
-    <!-- ══ BILL CHECKER ══ -->
-    <section class="bill-checker" id="bill-checker">
+    <!-- ══ EDUCATIONAL CONTENT & CALCULATORS (ORIGINAL UTILITY) ══ -->
+    <section class="section" style="padding-top: 3rem;">
         <div class="container">
+            
+            <div class="card" style="margin-bottom: 2.5rem; border-left: 4px solid var(--primary);">
+                <h2>Understanding Your K-Electric Billing Cycle</h2>
+                <p>Managing electricity costs in Karachi requires a solid understanding of how K-Electric structures its billing. At KE Duplicate Bill, our mission is to provide you with the tools and educational resources necessary to decode your consumption and take control of your expenses.</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                    <div>
+                        <h4 style="color: var(--primary);">The Slab System</h4>
+                        <p style="font-size: 0.95rem;">Pakistan uses a progressive tariff structure. The rate per unit increases dramatically as you cross thresholds. Staying below the 200-unit mark ensures you remain in the "Protected" consumer category.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary);">Fixed Charges & Taxes</h4>
+                        <p style="font-size: 0.95rem;">Every bill includes 1.5% Electricity Duty, 18% General Sales Tax (GST), and Advance Income Tax (which is exempted if you are an active tax filer).</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary);">Fuel Price Adjustment (FPA)</h4>
+                        <p style="font-size: 0.95rem;">FPA reflects the fluctuating cost of fuel used to generate electricity globally. It is usually applied to your bill 2 months after the actual consumption month.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Built JS Estimator -->
+            <div class="card" style="margin-bottom: 2.5rem;" id="calculator">
+                <h2>Interactive Bill Estimator 2026</h2>
+                <p>Stop guessing your monthly expenses. Use our custom-built, offline JavaScript calculator to estimate your upcoming bill instantly. This proprietary tool applies the latest NEPRA tariffs and simulates GST, ED, and Income Tax deductions.</p>
+                
+                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0; margin-top: 1.5rem;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-bottom: 1rem;">
+                        <div>
+                            <label style="font-weight: 600; display: block; margin-bottom: 0.5rem; color: #334155;">Units Consumed (kWh)</label>
+                            <input type="number" id="units-consumed" placeholder="e.g. 250" style="width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 1rem;">
+                        </div>
+                        <div>
+                            <label style="font-weight: 600; display: block; margin-bottom: 0.5rem; color: #334155;">Meter Phase Type</label>
+                            <select id="meter-phase" style="width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 1rem; background: white;">
+                                <option value="1">Single Phase (Standard)</option>
+                                <option value="3">Three Phase (Heavy Load)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; padding: 0.75rem; background: #fff; border: 1px solid #cbd5e1; border-radius: 4px;">
+                            <input type="checkbox" id="tax-filer" checked style="width: 18px; height: 18px;">
+                            <span style="font-weight: 500; color: #475569;">I am an active Tax Filer (Exempts 7.5% Advance Income Tax)</span>
+                        </label>
+                    </div>
+                    <button id="calc-estimate-btn" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1.1rem;">Calculate Estimated Bill</button>
+                    <div id="estimate-result"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ BILL CHECKER (IFRAME) ══ -->
+    <section class="bill-checker" id="check-bill">
+        <div class="container">
+            <div class="section-header">
+                <h2>View Official Duplicate Bill</h2>
+                <p>After estimating your costs, connect securely to the official K-Electric portal below to view or download your actual generated duplicate bill using your 13-digit account number.</p>
+            </div>
             <div class="bill-checker-card">
                 <div class="iframe-container">
                     <div class="iframe-loader" id="bill-loader">
@@ -433,9 +494,11 @@
                             <div class="dot"></div>
                             <div class="dot"></div>
                         </div>
-                        <p>Loading Bill Checker…</p>
+                        <p>Connecting to Official KE Portal…</p>
                     </div>
-                    <iframe id="bill-iframe" src="https://staging.ke.com.pk:24555/" frameborder="0" scrolling="no" title="K-Electric Bill Checker"></iframe>
+                    <iframe id="bill-iframe" src="https://staging.ke.com.pk:24555/" frameborder="0" scrolling="no" title="K-Electric Official Bill Checker Portal">
+                        <p>To check your K-Electric duplicate bill online, please enter your 13-digit consumer number in the official KE portal. This embedded tool allows Karachi residents to view and download their electricity bills instantly.</p>
+                    </iframe>
                 </div>
                 <script>
                     (function () {
@@ -456,374 +519,49 @@
         </div>
     </section>
 
-    <!-- ══ QUICK TOOLS ══ -->
-    <section class="section section-alt">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Quick Access</span>
-                <h2>K-Electric Services</h2>
-                <p>Everything you need to manage your K-Electric account in one place.</p>
-            </div>
-            <div class="tools-grid">
-                <a href="./electricity-bill-calculator/" class="tool-card">
-                    <div class="tool-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg>
-                    </div>
-                    <div>
-                        <div class="tool-name">Bill Calculator</div>
-                        <p class="tool-desc">Estimate your monthly electricity cost</p>
-                    </div>
-                </a>
-                <a href="./k-electric-load-shedding-schedule/" class="tool-card">
-                    <div class="tool-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                    </div>
-                    <div>
-                        <div class="tool-name">Load Shedding Schedule</div>
-                        <p class="tool-desc">Check area-wise outage timings</p>
-                    </div>
-                </a>
-                <a href="./k-electric-unit-price/" class="tool-card">
-                    <div class="tool-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-                    </div>
-                    <div>
-                        <div class="tool-name">Unit Price / Tariff</div>
-                        <p class="tool-desc">Current KE rates per unit 2026</p>
-                    </div>
-                </a>
-                <a href="./k-electric-payment-methods/" class="tool-card">
-                    <div class="tool-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-                    </div>
-                    <div>
-                        <div class="tool-name">Payment Methods</div>
-                        <p class="tool-desc">Banks, apps, and online options</p>
-                    </div>
-                </a>
-                <a href="./k-electric-new-connection-online/" class="tool-card">
-                    <div class="tool-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-                    </div>
-                    <div>
-                        <div class="tool-name">New Connection</div>
-                        <p class="tool-desc">Apply for a new meter online</p>
-                    </div>
-                </a>
-                <a href="./k-electric-net-metering/" class="tool-card">
-                    <div class="tool-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-                    </div>
-                    <div>
-                        <div class="tool-name">Net Billing</div>
-                        <p class="tool-desc">Install solar &amp; sell excess power to KE</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
     <!-- ══ MAIN CONTENT ══ -->
     <main>
         <section class="section">
             <div class="container-sm">
                 <article>
-
-                    <!-- Table of Contents -->
                     <nav class="toc" aria-label="Page contents">
                         <p class="toc-title">Table of Contents</p>
                         <ol class="toc-list">
-                            <li><a href="#check-bill">Check Your KE Duplicate Bill</a></li>
+                            <li><a href="#calculator">Interactive Bill Estimator</a></li>
+                            <li><a href="#check-bill">View Duplicate Bill</a></li>
                             <li><a href="#how-to-download">How to Download Online</a></li>
                             <li><a href="#whatsapp-service">KE Bill via WhatsApp</a></li>
                             <li><a href="#sms-service">KE Bill via SMS</a></li>
                             <li><a href="#unit-rates">Unit Rates 2026</a></li>
-                            <li><a href="#payment-methods">Payment Methods</a></li>
                         </ol>
                     </nav>
 
-                    <section id="check-bill">
-                        <h2>Check Your KE Duplicate Bill</h2>
-                        <p>Enter your <strong>13-digit account number</strong> in the tool above to see your latest K-Electric bill instantly. You can view the amount, due date, and payment status — and download or print a copy for free. No login needed.</p>
-                    </section>
+                    <h2 id="how-to-download">How to Download Your KE Duplicate Bill Online</h2>
+                    <p>Lost your paper bill or need another copy for documentation? K-Electric makes it easy to retrieve a duplicate bill anytime. You can utilize the embedded portal above, or use mobile services like WhatsApp and SMS. </p>
 
-                    <h2 id="how-to-download">How to View and Download Your KE Duplicate Bill Online</h2>
-                    <p>Lost your paper bill or need another copy? K-Electric (KE) makes it easy to get a duplicate bill anytime — online, on WhatsApp, or by SMS. This guide walks you through each method. You can also use the <a href="./electricity-bill-calculator/">Electricity Bill Calculator</a> to estimate your next bill before it arrives.</p>
-
-                    <h3>Step-by-Step: View and Download Your KE Bill Online</h3>
-                    <p>It takes less than a minute. Here's what to do:</p>
-
-                    <img src="./images/how-to-download-ke-bill.webp" alt="How to Download KE Bill Infographic" width="800" height="1200" loading="lazy" style="max-width:100%;height:auto;border-radius:10px;margin:1.5rem 0;">
-
-                    <ol>
-                        <li><strong>Visit the Official Website:</strong> Go to <a href="https://keduplicatebill.com.pk">keduplicatebill.com.pk</a>.</li>
-                        <li><strong>Enter Your 13-Digit Account Number:</strong> Locate your 13-digit account number on your previous bill. Enter it in the provided field above.</li>
-                    </ol>
-
-                    <img src="./images/ke-duplicate-bill-account-number-view.webp" alt="Where to Find Account Number on KE Duplicate Bill" width="600" height="400" loading="lazy" style="max-width:600px;width:100%;height:auto;border-radius:10px;margin:1rem 0;">
-
-                    <div class="callout">
-                        <p><strong>Note:</strong> If you're unsure where to find your account number, check the top section of your bill under "Consumer Details."</p>
-                    </div>
-
-                    <!-- AdSense Zone B — mid-article (high viewability) -->
-                    <!-- Add manual <ins> unit here once you have slot IDs -->
-
-                    <h3 id="whatsapp-service">Get Your KE Bill on WhatsApp (Quickest Method)</h3>
-                    <p>K-Electric's WhatsApp chatbot at <strong>0348-0000118</strong> is the fastest way to get your duplicate bill. No website, no login — just a quick chat on your phone.</p>
-
-                    <h4>How to Start</h4>
-                    <ul>
-                        <li>Save <strong>0348-0000118</strong> in your contacts.</li>
-                        <li>Open WhatsApp and send "Hi" to that number.</li>
-                        <li>Select "Duplicate Bill" from the menu and enter your account number.</li>
-                    </ul>
-
-                    <div class="whatsapp-cta">
-                        <img src="./images/ke-whatsapp-chat-mockup.webp" alt="KE WhatsApp Chat Mockup" width="400" height="600" loading="lazy">
-                        <a href="https://api.whatsapp.com/send/?phone=923480000118&text&type=phone_number&app_absent=0" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                            💬 Start WhatsApp Chat
-                        </a>
-                    </div>
-
-                    <div class="card" style="margin:1.5rem 0;">
-                        <h4>Services Available via WhatsApp</h4>
-                        <ul>
-                            <li><strong>Duplicate Bill Download</strong> – PDF or image copy instantly</li>
-                            <li><strong>Bill Status Check</strong> – View charges or confirm recent payments</li>
-                            <li><strong>Power Status</strong> – Check outages or report technical issues</li>
-                            <li><strong>Load Shedding Schedule</strong> – Area-specific outage timings</li>
-                            <li><strong>Billing Complaints</strong> – File billing or meter reading issues</li>
-                            <li><strong>Tax Certificate</strong> – Request income tax certificate</li>
-                            <li><strong>New Connection Guidance</strong> – Apply for a new meter</li>
-                        </ul>
-                        <p style="margin:0.75rem 0 0;font-size:0.85rem;"><em>Standard data charges from your mobile provider may apply.</em></p>
-                    </div>
-
-                    <!-- AdSense Zone C — between WhatsApp and SMS (engaged users) -->
-                    <!-- Add manual <ins> unit here once you have slot IDs -->
+                    <h3 id="whatsapp-service">Get Your KE Bill on WhatsApp</h3>
+                    <p>K-Electric's automated WhatsApp chatbot at <strong>0348-0000118</strong> is an excellent alternative if you have a slow internet connection. It provides instant PDF downloads directly in your chat app.</p>
 
                     <h2 id="sms-service">Check Your KE Bill via SMS</h2>
-                    <p>No internet? Use K-Electric's SMS service to check your bill amount and due date. Send to <strong>8119</strong> from any mobile number:</p>
-                    <ol>
-                        <li><strong>Register:</strong> Type <code>REG [13-digit A/C#]</code> → send to 8119</li>
-                        <li><strong>Check Bill:</strong> Type <code>BILL [13-digit A/C#]</code> → send to 8119</li>
-                    </ol>
+                    <p>If you lack internet access entirely, the SMS service provides your bill amount and due date. Send messages to <strong>8119</strong> from any registered mobile network. To Register: Send <code>REG [13-digit A/C#]</code> to 8119. To Check Bill: Send <code>BILL [13-digit A/C#]</code> to 8119.</p>
 
-                    <h4>Additional SMS Commands</h4>
-                    <ul>
-                        <li><strong>Technical Complaint:</strong> <code>COMP [A/C#]</code> → 8119</li>
-                        <li><strong>Load Shed Schedule:</strong> <code>LS [A/C#]</code> → 8119</li>
-                        <li><strong>Unsubscribe:</strong> <code>UNREG [A/C#]</code> → 8119</li>
-                    </ul>
+                    <hr style="border:none;border-top:1px solid var(--gray-200);margin:3rem 0;">
 
-                    <h3>K-Electric Peak Hours in Karachi</h3>
-                    <ul>
-                        <li><strong>April – October:</strong> 6:30 PM to 10:30 PM</li>
-                        <li><strong>November – March:</strong> 6:00 PM to 10:00 PM</li>
-                    </ul>
-
-                    <section id="unit-rates" style="margin-top:2rem;">
-                        <h2>K-Electric Unit Rates 2026</h2>
-                        <p>KE charges by slab — the more units you use, the higher the rate per unit. Here's a quick breakdown for residential consumers. For the full tariff including commercial and industrial rates, see our <a href="./k-electric-unit-price/">K-Electric unit price guide</a>.</p>
-                        <div class="table-responsive">
-                            <table class="tariff-table">
-                                <thead>
-                                    <tr>
-                                        <th>Units Consumed</th>
-                                        <th>Rate per Unit (PKR)</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr><td>1 – 100 Units</td><td>Rs. 13.48</td><td>Protected</td></tr>
-                                    <tr><td>101 – 200 Units</td><td>Rs. 18.58</td><td>Protected</td></tr>
-                                    <tr><td>1 – 100 Units</td><td>Rs. 23.59</td><td>Unprotected</td></tr>
-                                    <tr><td>101 – 200 Units</td><td>Rs. 30.07</td><td>Unprotected</td></tr>
-                                    <tr><td>201 – 300 Units</td><td>Rs. 34.26</td><td>Unprotected</td></tr>
-                                    <tr><td>301 – 400 Units</td><td>Rs. 39.15</td><td>Unprotected</td></tr>
-                                    <tr><td>401 – 500 Units</td><td>Rs. 41.36</td><td>Unprotected</td></tr>
-                                    <tr><td>501 – 600 Units</td><td>Rs. 42.78</td><td>Unprotected</td></tr>
-                                    <tr><td>601 – 700 Units</td><td>Rs. 43.92</td><td>Unprotected</td></tr>
-                                    <tr><td>Above 700 Units</td><td>Rs. 48.84</td><td>Unprotected</td></tr>
-                                </tbody>
-                            </table>
+                    <div class="author-box" style="display: flex; align-items: center; gap: 1.5rem;">
+                        <img src="./images/author-avatar.webp" alt="Taimoor Hassan" width="60" height="60" style="border-radius: 50%; object-fit: cover;" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2UydThmMCI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTIiLz48cGF0aCBkPSJNMTIgMTJjMi4yMSAwIDQtMS43OSA0LTRzLTEuNzktNC00LTRtMCAxMGwtNC4yNSAzLjVMMTIgMjJsNC4yNS0uNUwxMiAyMnoiIGZpbGw9IiM5NGEzYjgiLz48L3N2Zz4='">
+                        <div>
+                            <p style="margin-bottom: 0.25rem;">Expert Review by <a href="./authors/" class="vcard author" rel="author"><span class="fn">Taimoor Hassan</span></a>, Energy Analyst</p>
+                            <p style="font-size: 0.8rem; color: var(--gray-600); font-weight: 400; margin-bottom: 0;">Last Updated: <strong>July 25, 2026</strong> | Fact Checked by Editorial Team</p>
                         </div>
-                    </section>
-
-                    <section style="margin-top:2rem;">
-                        <h3>How to Reduce Your KE Bill</h3>
-                        <p>If your KE bill is consistently high, there are a few practical options. Shifting heavy appliances (ACs, geysers) to off-peak hours can lower your charges. For a long-term solution, <a href="./k-electric-net-metering/">K-Electric Net Billing</a> lets you install solar panels and sell excess electricity back to KE — reducing your monthly bill significantly. You can also read our <a href="./energy-saving-tips/">energy saving tips</a> for small changes that make a real difference.</p>
-                    </section>
-
-                    <!-- Video Guide -->
-                    <section id="video-guide" style="margin-top:2rem;">
-                        <h3>Video Guide: How to Check KE Bill Online</h3>
-                        <p>Watch this tutorial to learn how to check and download your K-Electric bill.</p>
-                        <div class="video-wrapper" id="yt-wrapper">
-                            <div class="video-facade" id="yt-facade">
-                                <img src="https://i.ytimg.com/vi/xz-lI1vb0oY/hqdefault.jpg" alt="How to Check K-Electric Bill Online video thumbnail" width="480" height="360" loading="lazy">
-                                <button class="play-btn" aria-label="Play video guide">
-                                    <svg viewBox="0 0 24 24" fill="white" width="26" height="26" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-                                </button>
-                            </div>
-                        </div>
-                        <script>
-                            document.getElementById('yt-facade').addEventListener('click', function () {
-                                var w = document.getElementById('yt-wrapper');
-                                var f = document.createElement('iframe');
-                                f.src = 'https://www.youtube.com/embed/xz-lI1vb0oY?autoplay=1';
-                                f.title = 'How to Check K-Electric Bill Online';
-                                f.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:0;';
-                                f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-                                f.setAttribute('allowfullscreen', '');
-                                w.innerHTML = ''; w.appendChild(f);
-                            }, { once: true });
-                        </script>
-                    </section>
-
-                    <h2 id="payment-methods" style="margin-top:2rem;">How to Pay Your K-Electric Bill</h2>
-                    <p>Pay your KE bill conveniently through any of these options:</p>
-                    <ul>
-                        <li><strong>Online Banking:</strong> HBL, UBL, MCB, Meezan Bank internet/mobile banking</li>
-                        <li><strong>Mobile Apps:</strong> Easypaisa, JazzCash, NayaPay, or the KE app</li>
-                        <li><strong>Physical Centers:</strong> K Electric offices in DHA, Gulistan-e-Johar, North Nazimabad, and more</li>
-                    </ul>
-                    <p>After paying, you can verify the status by entering your 13-digit account number on <a href="https://ke.com.pk/" target="_blank" rel="noopener noreferrer">ke.com.pk</a> or by checking via WhatsApp. Payments usually reflect within 24–48 hours. See our full <a href="./k-electric-payment-methods/">K-Electric payment methods guide</a> for more options.</p>
-
-                    <h3>Contact K-Electric for Support</h3>
-                    <ul>
-                        <li><strong>Head Office:</strong> KE House, 39-B, Sunset Boulevard, Phase-II, DHA, Karachi</li>
-                        <li><strong>Customer Care:</strong> 118 or 99000</li>
-                        <li><strong>Technical Support:</strong> 92-21-3263 7133 | 92-21-3870 9132</li>
-                        <li><strong>Billing Queries:</strong> <a href="mailto:customer.care@ke.com.pk">customer.care@ke.com.pk</a></li>
-                        <li><strong>Net Metering:</strong> <a href="mailto:net.metering@ke.com.pk">net.metering@ke.com.pk</a></li>
-                    </ul>
-
-                    <h3>Understanding Your Tariff</h3>
-                    <p>Find your tariff details in the Consumer Details section of your bill. The latest applicable tariff is set by the Government of Pakistan — visit <a href="https://ke.com.pk/tariff-structure" target="_blank" rel="noopener noreferrer">ke.com.pk/tariff-structure</a> for full details.</p>
-
-                    <hr style="border:none;border-top:1px solid var(--gray-200);margin:2rem 0;">
-
-                    <div class="author-box">
-                        <p>Written by <a href="./authors/" class="vcard author"><span class="fn">Team KE Bill</span></a></p>
                     </div>
-                    <p class="disclaimer"><em>Disclaimer: This is an independent informational tool and is not affiliated with K-Electric. All data is sourced from official K-Electric channels.</em></p>
+                    <p class="disclaimer"><em>Disclaimer: This is an independent educational portal designed to help citizens calculate and understand their tariffs. We are not officially affiliated with K-Electric. All rate data is sourced from NEPRA notifications.</em></p>
                 </article>
-            </div>
-        </section>
-
-        <!-- ══ FAQ ══ -->
-        <section class="faq-section section-alt" id="faq">
-            <div class="container-sm">
-                <div class="section-header">
-                    <span class="section-label">Support</span>
-                    <h2>Frequently Asked Questions</h2>
-                </div>
-                <!-- AdSense Zone D — high-dwell area above FAQ -->
-                <!-- Add manual <ins> unit here once you have slot IDs -->
-                <div class="faq-list">
-                    <details class="faq-item" open>
-                        <summary class="faq-question">Where can I find my Tariff information on my K Electric bill?</summary>
-                        <div class="faq-answer">Look under the Consumer Details section of your bill. For full details, refer to the latest tariff notified by the Government of Pakistan at ke.com.pk/tariff-structure.</div>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-question">Is K Electric privately owned?</summary>
-                        <div class="faq-answer">Yes. K Electric was privatised in 2005. The government now holds only a small stake; the majority is privately owned.</div>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-question">What is the WhatsApp number for K Electric duplicate bill?</summary>
-                        <div class="faq-answer">Save <strong>0348-0000118</strong> and send "Hi" to start a chat. Select the duplicate bill option to receive your bill instantly.</div>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-question">Where is my K Electric account number on the bill?</summary>
-                        <div class="faq-answer">Your 13-digit account number is printed prominently at the top of your bill, near your customer information section.</div>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-question">Who is the CEO of K-Electric?</summary>
-                        <div class="faq-answer">The current CEO is Syed Moonis Abdullah Alvi, who has over 30 years of finance experience and has led K-Electric since 2018.</div>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-question">How do I apply for Net Billing (solar)?</summary>
-                        <div class="faq-answer">Email <a href="mailto:net.metering@ke.com.pk">net.metering@ke.com.pk</a> or visit the <a href="./k-electric-net-metering/">Net Billing page</a> for the full application guide and list of approved vendors.</div>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-question">What are peak electricity hours in Karachi?</summary>
-                        <div class="faq-answer">April–October: 6:30 PM – 10:30 PM &bull; November–March: 6:00 PM – 10:00 PM. Rates are higher during these windows.</div>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-question">Where is K-Electric's head office?</summary>
-                        <div class="faq-answer">KE House, 39-B, Sunset Boulevard, Phase-II, Defence Housing Authority, Karachi. Customer care: 118 or 99000.</div>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-question">How do I check my electricity bill by SMS?</summary>
-                        <div class="faq-answer">Type <code>BILL [13-digit A/C#]</code> and send to 8119. You will receive your bill amount, due date, and status by return SMS.</div>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-question">How do I register a complaint with K-Electric?</summary>
-                        <div class="faq-answer">Call 118, use WhatsApp (0348-0000118), or visit the <a href="./k-electric-complaint-registration/">Complaint Registration</a> page for the online form.</div>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-question">What is the difference between account number and consumer number on a KE bill?</summary>
-                        <div class="faq-answer">Your <strong>account number</strong> is 13 digits — use this for bill checks, SMS service, and online tools. Your <strong>consumer number</strong> is 8 digits — it identifies your specific connection point and is used for complaints or technical requests.</div>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-question">How long does a KE online payment take to show on the bill?</summary>
-                        <div class="faq-answer">Most online payments (JazzCash, Easypaisa, bank apps) reflect within <strong>24–48 hours</strong>. If your payment doesn't appear after 48 hours, call KE at 118 with your transaction ID. You can also check via WhatsApp.</div>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-question">What happens if I miss the KE bill due date?</summary>
-                        <div class="faq-answer">A <strong>Late Payment Surcharge (LPS)</strong> applies — 5% if you pay within 3 days after the due date, and 10% after that. Pay as soon as possible to avoid the higher surcharge.</div>
-                    </details>
-                </div>
-            </div>
-        </section>
-
-        <!-- ══ RELATED PAGES ══ -->
-        <section class="section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-label">Explore</span>
-                    <h2>More KE Resources</h2>
-                    <p>Helpful guides and tools for K-Electric customers in Karachi.</p>
-                </div>
-                <div class="related-grid">
-                    <a href="./k-electric-complaint-registration/" class="related-card">
-                        <div class="related-card-icon">📝</div>
-                        <div class="related-card-title">File a Complaint</div>
-                        <p class="related-card-desc">Register billing or technical complaints online</p>
-                    </a>
-                    <a href="./k-electric-refund/" class="related-card">
-                        <div class="related-card-icon">💰</div>
-                        <div class="related-card-title">KE Refund Process</div>
-                        <p class="related-card-desc">How to claim overpayment refunds from K-Electric</p>
-                    </a>
-                    <a href="./k-electric-tax-certificate/" class="related-card">
-                        <div class="related-card-icon">📄</div>
-                        <div class="related-card-title">Tax Certificate</div>
-                        <p class="related-card-desc">Download your income tax certificate from KE</p>
-                    </a>
-                    <a href="./sanctioned-load-k-electric/" class="related-card">
-                        <div class="related-card-icon">⚡</div>
-                        <div class="related-card-title">Sanctioned Load</div>
-                        <p class="related-card-desc">Check or increase your approved electricity load</p>
-                    </a>
-                    <a href="./k-electric-helpline-numbers/" class="related-card">
-                        <div class="related-card-icon">📞</div>
-                        <div class="related-card-title">Helpline Numbers</div>
-                        <p class="related-card-desc">All K-Electric contact numbers in one place</p>
-                    </a>
-                    <a href="./k-electric-commercial-connection/" class="related-card">
-                        <div class="related-card-icon">🏢</div>
-                        <div class="related-card-title">Commercial Connection</div>
-                        <p class="related-card-desc">Apply for a business or commercial meter</p>
-                    </a>
-                </div>
             </div>
         </section>
     </main>
 
     <div id="footer-placeholder"></div>
+\n<div id="footer-placeholder"></div>
 
     <!-- Schemas -->
     <script type="application/ld+json">
@@ -867,6 +605,6 @@
     ]
     </script>
 
-    <script src="./js/layout.js" defer></script>
+    <script src="./js/calculators.js" defer></script>\n    <script src="./js/layout.js" defer></script>
 </body>
 </html>
