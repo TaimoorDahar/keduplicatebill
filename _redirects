@@ -1,1 +1,13 @@
+# Permanent 301 Redirects for Consolidated Architecture
+/k-electric-helpline-numbers/ /k-electric-support/ 301
+/k-electric-complaint-registration/ /k-electric-support/ 301
+/k-electric-new-connection-online/ /k-electric-new-connection/ 301
+/k-electric-commercial-connection/ /k-electric-new-connection/ 301
+/k-electric-load-shedding-schedule/ /k-electric-load-shedding/ 301
+/sanctioned-load-k-electric/ /electricity-bill-calculator/ 301
+/k-electric-refund/ /k-electric-unit-price/ 301
+/k-electric-tax-certificate/ /k-electric-payment-methods/ 301
+/energy-saving-tips/ /electricity-bill-calculator/ 301
+/privacy-policy-for-app/ /privacy-policy/ 301
+/authors/ /about-us/ 301
 /ads.txt https://srv.adstxtmanager.com/19390/keduplicatebill.com.pk 301

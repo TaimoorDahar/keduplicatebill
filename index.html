@@ -1,603 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="bzE_6XRNNFNaQYpwgcaI6y_yQLutiJimDTHjsAe9N7A" />
-
-    <!-- Resource Hints -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- SEO Meta -->
-    <title>How to View a K-Electric Duplicate Bill | KE Bill Guide</title>
-    <meta name="description" content="A practical, independent guide to finding your K-Electric account number, viewing a duplicate bill, payment options, due dates, and troubleshooting common problems.">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="KE Duplicate Bill 2026 – Check K-Electric Bill Online">
-    <meta property="og:description" content="Enter your 13-digit account number to check and download your K-Electric duplicate bill online, on WhatsApp, or by SMS. Free tool, updated 2026.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://keduplicatebill.com.pk/">
-    <meta property="og:image" content="https://keduplicatebill.com.pk/images/Ke-Duplicate-bill-View-Download.webp">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="KE Duplicate Bill 2026 – Check K-Electric Bill Online">
-    <meta name="twitter:description" content="Enter your 13-digit account number to check and download your K-Electric duplicate bill online, on WhatsApp, or by SMS. Free tool, updated 2026.">
-    <meta name="twitter:image" content="https://keduplicatebill.com.pk/images/Ke-Duplicate-bill-View-Download.webp">
-
-    <!-- Canonical & hreflang -->
+    <title>KE Bill Guide — Independent K-Electric Bill Information & Calculator Tools</title>
+    <meta name="description" content="Independent guide for K-Electric consumers in Karachi. Calculate estimated electricity bills, view NEPRA tariff slabs, explore payment channels, and access support guides.">
     <link rel="canonical" href="https://keduplicatebill.com.pk/">
-    <link rel="alternate" hreflang="en" href="https://keduplicatebill.com.pk/">
-    <link rel="alternate" hreflang="ur" href="https://keduplicatebill.com.pk/ur/">
-    <link rel="alternate" hreflang="x-default" href="https://keduplicatebill.com.pk/">
-
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"
-        media="print" onload="this.media='all'">
-    <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    </noscript>
-
-    <!-- Critical CSS -->
-    <style>
-        /* ── Design Tokens ── */
-        :root {
-            --primary:        #0066cc;
-            --primary-dark:   #0052a3;
-            --primary-light:  #eff6ff;
-            --accent:         #059669;
-            --white:          #ffffff;
-            --gray-50:        #f8fafc;
-            --gray-100:       #f1f5f9;
-            --gray-200:       #e2e8f0;
-            --gray-400:       #94a3b8;
-            --gray-600:       #475569;
-            --gray-900:       #0f172a;
-            --font:           'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            --radius-sm:      6px;
-            --radius-md:      10px;
-            --radius-lg:      14px;
-            --shadow-sm:      0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.05);
-            --shadow-md:      0 4px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.04);
-            --shadow-lg:      0 10px 28px rgba(0,0,0,.10), 0 4px 8px rgba(0,0,0,.05);
-        }
-
-        [data-theme="dark"] {
-            --primary:       #60a5fa;
-            --primary-dark:  #3b82f6;
-            --primary-light: #1e3a5f;
-            --white:         #111827;
-            --gray-50:       #1f2937;
-            --gray-100:      #374151;
-            --gray-200:      #4b5563;
-            --gray-400:      #9ca3af;
-            --gray-600:      #d1d5db;
-            --gray-900:      #f9fafb;
-        }
-
-        /* ── Reset ── */
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { font-size: 16px; scroll-behavior: smooth; }
-        body {
-            font-family: var(--font);
-            color: var(--gray-900);
-            background: var(--white);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* ── Typography ── */
-        h1, h2, h3, h4 { font-weight: 700; line-height: 1.25; color: var(--gray-900); }
-        h1 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 1rem; }
-        h2 { font-size: clamp(1.375rem, 3vw, 2rem);  margin-bottom: 0.875rem; }
-        h3 { font-size: clamp(1.125rem, 2.5vw, 1.5rem); margin-bottom: 0.75rem; }
-        h4 { font-size: 1.125rem; margin-bottom: 0.625rem; }
-        p  { color: var(--gray-600); margin-bottom: 1rem; line-height: 1.75; }
-        a  { color: var(--primary); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
-        li { color: var(--gray-600); margin-bottom: 0.375rem; line-height: 1.75; }
-
-        /* ── Layout ── */
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem; }
-        .container-sm { max-width: 860px;  margin: 0 auto; padding: 0 1.25rem; }
-
-        /* ── Header (critical — above fold) ── */
-        .header {
-            background: var(--white);
-            border-bottom: 1px solid var(--gray-200);
-            position: sticky; top: 0; z-index: 100;
-            padding: 0.875rem 0;
-        }
-        .header-content { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
-        .logo { display: flex; align-items: center; text-decoration: none; }
-        .logo img { height: 44px; width: auto; }
-        .logo:hover { opacity: 0.9; }
-        .nav { display: flex; align-items: center; gap: 1.75rem; flex-wrap: wrap; }
-        .nav a { color: var(--gray-900); font-weight: 500; font-size: 0.9375rem; text-decoration: none; padding: 0.375rem 0; white-space: nowrap; }
-        .nav a:hover { color: var(--primary); }
-        .nav a.active { color: var(--primary); }
-        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 0.375rem; color: var(--gray-900); }
-
-        /* ── Hero ── */
-        .hero {
-            background: linear-gradient(135deg, #0066cc 0%, #3385d6 100%);
-            padding: 3rem 0;
-            text-align: center;
-        }
-        .hero h1 { color: #fff !important; letter-spacing: -0.02em; margin-bottom: 0; }
-
-        /* ── Bill Checker ── */
-        .bill-checker { background: var(--gray-50); padding: 2.5rem 0; }
-        .bill-checker-card {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            padding: 1.75rem;
-            box-shadow: var(--shadow-lg);
-            border: 1px solid var(--gray-200);
-        }
-        .iframe-container {
-            position: relative; width: 100%;
-            min-height: 850px;
-            border-radius: var(--radius-md);
-            background: var(--white);
-        }
-        .iframe-container iframe {
-            width: 100%; min-height: 850px;
-            overflow: hidden; border: none; display: block;
-        }
-        .iframe-loader {
-            position: absolute; inset: 0;
-            display: flex; flex-direction: column;
-            align-items: center; justify-content: center;
-            background: var(--white); z-index: 10;
-        }
-        .iframe-loader p { margin-top: 1.25rem; color: var(--primary); font-weight: 600; }
-        .loader-dots { display: flex; gap: 0.625rem; }
-        .loader-dots .dot {
-            width: 12px; height: 12px; border-radius: 50%;
-            background: var(--primary); animation: dotPulse 1.4s infinite ease-in-out;
-        }
-        .loader-dots .dot:nth-child(1) { animation-delay: -0.32s; }
-        .loader-dots .dot:nth-child(2) { animation-delay: -0.16s; }
-        @keyframes dotPulse {
-            0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
-            40%            { transform: scale(1);   opacity: 1;   }
-        }
-
-        /* ── Buttons ── */
-        .btn {
-            display: inline-flex; align-items: center; justify-content: center;
-            gap: 0.375rem; padding: 0.6875rem 1.5rem;
-            border-radius: var(--radius-sm); font-weight: 600; font-size: 0.9375rem;
-            cursor: pointer; border: none; text-decoration: none;
-            transition: opacity 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
-        }
-        .btn:hover { opacity: 0.92; transform: translateY(-1px); box-shadow: var(--shadow-md); text-decoration: none; }
-        .btn-primary { background: var(--primary); color: #fff !important; }
-        .btn-outline { background: transparent; color: var(--primary); border: 1.5px solid var(--primary); }
-        .btn-outline:hover { background: var(--primary-light); }
-
-        /* ── Cards ── */
-        .card {
-            background: var(--white); border: 1px solid var(--gray-200);
-            border-radius: var(--radius-md); padding: 1.5rem;
-            box-shadow: var(--shadow-sm);
-        }
-
-        /* ── Quick Tools Section ── */
-        .section { padding: 3rem 0; }
-        .section-alt { background: var(--gray-50); }
-        .section-header { text-align: center; margin-bottom: 2rem; }
-        .section-label {
-            display: inline-block; font-size: 0.75rem; font-weight: 700;
-            letter-spacing: 0.1em; text-transform: uppercase;
-            color: var(--primary); margin-bottom: 0.5rem;
-        }
-        .section-header h2 { margin-bottom: 0.375rem; }
-        .section-header p { max-width: 480px; margin: 0 auto; font-size: 0.9375rem; }
-
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-        }
-        .tool-card {
-            display: flex; flex-direction: column; align-items: flex-start;
-            gap: 0.75rem; padding: 1.25rem 1.25rem 1.375rem;
-            background: var(--white); border: 1px solid var(--gray-200);
-            border-radius: var(--radius-md); text-decoration: none;
-            box-shadow: var(--shadow-sm);
-            transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-        }
-        .tool-card:hover {
-            border-color: var(--primary); box-shadow: var(--shadow-md);
-            transform: translateY(-2px); text-decoration: none;
-        }
-        .tool-icon {
-            width: 40px; height: 40px; border-radius: var(--radius-sm);
-            background: var(--primary-light);
-            display: flex; align-items: center; justify-content: center;
-            flex-shrink: 0;
-        }
-        .tool-icon svg { width: 20px; height: 20px; color: var(--primary); }
-        .tool-name { font-weight: 600; font-size: 0.9375rem; color: var(--gray-900); line-height: 1.3; }
-        .tool-desc { font-size: 0.8125rem; color: var(--gray-400); margin: 0; line-height: 1.5; }
-
-        /* ── Trust Strip ── */
-        .trust-strip {
-            display: flex; flex-wrap: wrap; gap: 0.75rem;
-            padding: 1rem 0; margin-bottom: 1.75rem;
-            border-top: 1px solid var(--gray-200);
-            border-bottom: 1px solid var(--gray-200);
-        }
-        .trust-item {
-            display: flex; align-items: center; gap: 0.375rem;
-            font-size: 0.8125rem; font-weight: 500; color: var(--gray-600);
-        }
-        .trust-item svg { width: 15px; height: 15px; color: var(--accent); flex-shrink: 0; }
-
-        /* ── Table of Contents ── */
-        .toc {
-            background: var(--primary-light); border-left: 3px solid var(--primary);
-            border-radius: var(--radius-md); padding: 1.25rem 1.5rem; margin-bottom: 2rem;
-        }
-        .toc-title { font-size: 0.875rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--gray-900); }
-        .toc-list { padding-left: 1.25rem; margin: 0; list-style: decimal; }
-        .toc-list li { margin-bottom: 0.3rem; }
-        .toc-list a { color: var(--primary); font-size: 0.9rem; text-decoration: none; }
-        .toc-list a:hover { text-decoration: underline; }
-
-        /* ── Callout ── */
-        .callout {
-            background: var(--primary-light); border-left: 3px solid var(--primary);
-            border-radius: var(--radius-sm); padding: 0.875rem 1.125rem; margin: 1.5rem 0;
-        }
-        .callout p { margin: 0; color: #1d4ed8; font-size: 0.9rem; }
-
-        /* ── Tariff Table ── */
-        .table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: var(--radius-md); border: 1px solid var(--gray-200); }
-        .tariff-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
-        .tariff-table th {
-            background: var(--primary); color: #fff;
-            padding: 0.75rem 1rem; text-align: left; font-weight: 600;
-        }
-        .tariff-table td { padding: 0.625rem 1rem; border-bottom: 1px solid var(--gray-200); color: var(--gray-600); }
-        .tariff-table tbody tr:nth-child(even) { background: var(--gray-50); }
-        .tariff-table tbody tr:hover { background: var(--primary-light); }
-        .tariff-table tbody tr:last-child td { border-bottom: none; }
-
-        /* ── FAQ ── */
-        .faq-section { padding: 3rem 0; }
-        .faq-list { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1.5rem; }
-        .faq-item { border: 1px solid var(--gray-200); border-radius: var(--radius-md); overflow: hidden; }
-        .faq-item[open] { border-color: var(--primary); }
-        .faq-question {
-            padding: 1rem 1.25rem; font-weight: 600; font-size: 0.9375rem;
-            cursor: pointer; list-style: none; display: flex;
-            justify-content: space-between; align-items: center; gap: 1rem;
-            user-select: none; color: var(--gray-900); background: var(--white);
-        }
-        .faq-question::-webkit-details-marker { display: none; }
-        .faq-question::after { content: '+'; font-size: 1.25rem; font-weight: 300; color: var(--primary); flex-shrink: 0; }
-        .faq-item[open] .faq-question::after { content: '−'; }
-        .faq-answer { padding: 0 1.25rem 1.125rem; color: var(--gray-600); line-height: 1.75; font-size: 0.9375rem; }
-
-        /* ── Related Pages Grid ── */
-        .related-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-        }
-        .related-card {
-            display: block; padding: 1.25rem; text-decoration: none;
-            background: var(--white); border: 1px solid var(--gray-200);
-            border-radius: var(--radius-md); box-shadow: var(--shadow-sm);
-            transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-        }
-        .related-card:hover { border-color: var(--primary); box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none; }
-        .related-card-icon { font-size: 1.5rem; margin-bottom: 0.625rem; }
-        .related-card-title { font-weight: 600; font-size: 0.9375rem; color: var(--gray-900); margin-bottom: 0.25rem; }
-        .related-card-desc { font-size: 0.8125rem; color: var(--gray-400); margin: 0; line-height: 1.5; }
-
-        /* ── WhatsApp CTA ── */
-        .whatsapp-cta { display: flex; flex-direction: column; align-items: center; gap: 1rem; margin: 1.5rem 0; }
-        .whatsapp-cta img { max-width: 280px; width: 100%; height: auto; border-radius: var(--radius-md); }
-
-        /* ── Video ── */
-        .video-wrapper {
-            position: relative; padding-bottom: 56.25%; height: 0;
-            overflow: hidden; border-radius: var(--radius-md); background: #000; cursor: pointer;
-        }
-        .video-facade { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
-        .video-facade img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; margin: 0; display: block; }
-        .play-btn {
-            position: absolute; background: rgba(220,38,38,.9);
-            border: none; border-radius: 50%; width: 64px; height: 64px;
-            cursor: pointer; display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,.4);
-            transition: transform .2s ease, background .2s ease;
-        }
-        .play-btn:hover { background: #dc2626; transform: scale(1.1); }
-
-        /* ── Author / Disclaimer ── */
-        .author-box {
-            background: var(--gray-50); border-left: 3px solid var(--primary);
-            border-radius: var(--radius-sm); padding: 1rem 1.25rem; margin: 1.75rem 0;
-        }
-        .author-box p { margin: 0; font-weight: 600; font-size: 0.9rem; color: var(--gray-900); }
-        .disclaimer { font-size: 0.8rem; color: var(--gray-400); }
-
-        /* ── Anchor offset for sticky header ── */
-        [id] { scroll-margin-top: 80px; }
-
-        /* ── Dark mode overrides ── */
-        [data-theme="dark"] .header     { background: #1f2937; border-color: #374151; }
-        [data-theme="dark"] .hero       { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); }
-        [data-theme="dark"] .card,
-        [data-theme="dark"] .tool-card,
-        [data-theme="dark"] .related-card { background: #1f2937; border-color: #374151; }
-        [data-theme="dark"] .bill-checker { background: #111827; }
-        [data-theme="dark"] .bill-checker-card { background: #1f2937; border-color: #374151; }
-        [data-theme="dark"] .iframe-container { background: #fff; }
-        [data-theme="dark"] .section-alt { background: #111827; }
-        [data-theme="dark"] .toc        { background: #1e3a5f; }
-        [data-theme="dark"] .callout    { background: #1e3a5f; }
-        [data-theme="dark"] .callout p  { color: #93c5fd; }
-        [data-theme="dark"] .tariff-table td { border-color: #374151; }
-        [data-theme="dark"] .tariff-table tbody tr:nth-child(even) { background: #1f2937; }
-        [data-theme="dark"] .tariff-table tbody tr:hover { background: #1e3a5f; }
-        [data-theme="dark"] .faq-item   { border-color: #374151; }
-        [data-theme="dark"] .faq-question { background: #1f2937; color: #f9fafb; }
-        [data-theme="dark"] .faq-answer { color: #d1d5db; }
-        [data-theme="dark"] .trust-strip { border-color: #374151; }
-        [data-theme="dark"] .author-box { background: #1f2937; }
-
-        /* ── Mobile ── */
-        @media (max-width: 768px) {
-            .tools-grid   { grid-template-columns: repeat(2, 1fr); }
-            .related-grid { grid-template-columns: repeat(2, 1fr); }
-            .bill-checker-card { padding: 1rem; }
-            article p, article li { line-height: 1.8; }
-            .mobile-menu-btn { display: block; }
-            .nav {
-                display: none; flex-direction: column; width: 100%;
-                position: absolute; top: 100%; left: 0; background: var(--white);
-                border-top: 1px solid var(--gray-200); padding: 0;
-                box-shadow: var(--shadow-md); z-index: 99;
-            }
-            .nav.active { display: flex; }
-            .nav a { width: 100%; text-align: center; padding: 0.9rem 1rem; border-bottom: 1px solid var(--gray-200); }
-            .header-content { position: relative; }
-        }
-        @media (max-width: 480px) {
-            .tools-grid   { grid-template-columns: 1fr; }
-            .related-grid { grid-template-columns: 1fr; }
-            .trust-strip  { gap: 0.5rem; }
-        }
-        @media (min-width: 701px) and (max-width: 1024px) {
-            .iframe-container { min-height: 880px; }
-            .iframe-container iframe { min-height: 880px; }
-        }
-        @media (max-width: 700px) {
-            .iframe-container { min-height: 1500px; }
-            .iframe-container iframe { min-height: 1500px !important; }
-            .bill-checker .container { padding-left: 0; padding-right: 0; }
-            .bill-checker-card { padding: 0; border-radius: 0; box-shadow: none; border: none; }
-            .iframe-container { border-radius: 0; }
-        }
-    </style>
-
-    <!-- Deferred full stylesheet -->
-    <link rel="preload" href="./css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="./css/style.css"></noscript>
-
-    <!-- Schemas -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Organization","name":"KE Bill Guide","url":"https://keduplicatebill.com.pk/","email":"info@keduplicatebill.com.pk","sameAs":["https://www.ke.com.pk/"]}
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "KE Bill Guide",
+      "url": "https://keduplicatebill.com.pk/",
+      "description": "Independent educational resource and utility calculation tools for K-Electric consumers."
+    }
     </script>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://keduplicatebill.com.pk/"}]}
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "KE Bill Guide",
+      "url": "https://keduplicatebill.com.pk/",
+      "logo": "https://keduplicatebill.com.pk/images/ke-duplicate-bill.webp"
+    }
     </script>
 </head>
-
 <body>
-    <a class="skip-link" href="#guide">Skip to the bill guide</a>
     <div id="header-placeholder"></div>
 
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>How to view a K-Electric duplicate bill</h1>
-            <p style="color: #fff; font-size: 1.1rem; max-width: 600px; margin: 0 auto; opacity: 0.9;">Find the account number, understand the options, and then continue to K-Electric’s official bill portal.</p>
+            <h1>KE Bill Guide</h1>
+            <p>Independent utility tools, bill estimation calculators, and consumer guides for K-Electric customers in Karachi.</p>
         </div>
     </section>
 
-    <main id="guide">
-    <section class="section" style="padding-top: 3rem;">
-        <div class="container">
+    <!-- Main Content Container -->
+    <main class="container" style="padding-top: 2rem; padding-bottom: 3rem;">
+
+        <!-- Independence Disclaimer Callout -->
+        <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #2563eb; padding: 1.25rem; border-radius: 6px; margin-bottom: 2rem;">
+            <p style="margin: 0; font-size: 0.95rem; color: #334155; line-height: 1.6;">
+                <strong>Independent Site Disclaimer:</strong> KE Bill Guide is an independent informational website and is not affiliated with, authorized, or endorsed by K-Electric. For account-specific official bills, payment processing, or new meter requests, please visit <a href="https://www.ke.com.pk/" rel="noopener noreferrer">K-Electric’s Official Website</a>.
+            </p>
+        </div>
+
+        <!-- Section 1: Interactive Bill Estimator Tool -->
+        <section class="card" style="padding: 2rem; margin-bottom: 2.5rem;" id="calculator">
+            <h2>📊 Instant K-Electric Bill Estimator</h2>
+            <p>Estimate your monthly electricity charges based on current NEPRA tariff slabs, meter phase, and tax status.</p>
             
-            <div class="card" style="margin-bottom: 2.5rem; border-left: 4px solid var(--primary);">
-                <h2>What a duplicate bill is—and what this site does</h2>
-                <p>A duplicate bill is another copy of a bill already issued by K-Electric, Karachi’s electricity supplier. It is useful when the printed copy is lost or a payment provider asks for bill details. This independent guide explains the process; it does not issue bills, handle payments, or have access to customer accounts.</p>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+            <div style="background: #f1f5f9; padding: 1.5rem; border-radius: 8px; margin-top: 1.5rem;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
                     <div>
-                        <h4 style="color: var(--primary);">Find your reference</h4>
-                        <p style="font-size: 0.95rem;">Keep a previous K-Electric bill nearby. The bill portal asks for the 13-digit account number shown with your customer details. Do not post that number publicly or send it to an unrelated person.</p>
+                        <label for="units-consumed" style="font-weight: 600; display: block; margin-bottom: 0.5rem;">Units Consumed (kWh):</label>
+                        <input type="number" id="units-consumed" placeholder="e.g. 250" value="250" class="form-input" style="width: 100%; padding: 0.75rem; border-radius: 6px; border: 1px solid #cbd5e1;">
                     </div>
                     <div>
-                        <h4 style="color: var(--primary);">Use the official record</h4>
-                        <p style="font-size: 0.95rem;">The portal can display the bill K-Electric has issued. Its amount, due date, and payment status are the record to rely on; estimates and screenshots are not a substitute.</p>
+                        <label for="meter-phase" style="font-weight: 600; display: block; margin-bottom: 0.5rem;">Meter Connection Phase:</label>
+                        <select id="meter-phase" class="form-input" style="width: 100%; padding: 0.75rem; border-radius: 6px; border: 1px solid #cbd5e1;">
+                            <option value="1">Single Phase (Residential)</option>
+                            <option value="3">Three Phase (3-Phase Fixed Charges)</option>
+                        </select>
                     </div>
-                    <div>
-                        <h4 style="color: var(--primary);">Check before you pay</h4>
-                        <p style="font-size: 0.95rem;">Confirm the account number, billing month, payable amount, and due date on the official copy. Payment channels and eligibility can change, so check K-Electric’s current instructions.</p>
-                    </div>
-                </div>
-            </div>
-
-            <section aria-labelledby="process-title" class="card" style="margin-bottom:2.5rem">
-                <h2 id="process-title">Before you open the bill portal</h2>
-                <ol><li>Locate a previous bill and read the 13-digit account number from the customer-information area.</li><li>Have your mobile phone available if K-Electric asks for verification.</li><li>Use a private connection and enter details only on K-Electric’s official portal.</li><li>Save or print the displayed bill only after checking the account and billing month.</li></ol>
-                <table class="data-table"><caption>Ways to deal with a missing bill</caption><thead><tr><th>Need</th><th>Best next step</th></tr></thead><tbody><tr><td>See the issued amount or due date</td><td>Use the official bill portal below with the account number.</td></tr><tr><td>Pay an issued bill</td><td>Choose a method listed by K-Electric or your bank; retain the transaction receipt.</td></tr><tr><td>Report an incorrect bill or outage</td><td>Contact K-Electric directly. This site cannot open, amend, or escalate an account case.</td></tr></tbody></table>
-                <aside class="warning"><strong>Due dates and late charges:</strong> The bill itself is the source of the applicable due date and any late-payment amount. Do not assume a grace period from an old bill; ask K-Electric if the amount or payment status is unclear.</aside>
-            </section>
-
-            <!-- Optional local estimator -->
-            <div class="card" style="margin-bottom: 2.5rem;" id="calculator">
-                <h2>Personal consumption estimate</h2>
-                <p>This calculator is for planning only. Tariffs, taxes, adjustments, and eligibility vary. Compare any estimate with your issued K-Electric bill and official tariff notices.</p>
-                
-                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0; margin-top: 1.5rem;">
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-bottom: 1rem;">
-                        <div>
-                            <label style="font-weight: 600; display: block; margin-bottom: 0.5rem; color: #334155;">Units Consumed (kWh)</label>
-                            <input type="number" id="units-consumed" placeholder="e.g. 250" style="width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 1rem;">
-                        </div>
-                        <div>
-                            <label style="font-weight: 600; display: block; margin-bottom: 0.5rem; color: #334155;">Meter Phase Type</label>
-                            <select id="meter-phase" style="width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 1rem; background: white;">
-                                <option value="1">Single Phase (Standard)</option>
-                                <option value="3">Three Phase (Heavy Load)</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div style="margin-bottom: 1.5rem;">
-                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; padding: 0.75rem; background: #fff; border: 1px solid #cbd5e1; border-radius: 4px;">
+                    <div style="display: flex; align-items: center; margin-top: 1.5rem;">
+                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 600;">
                             <input type="checkbox" id="tax-filer" checked style="width: 18px; height: 18px;">
-                            <span style="font-weight: 500; color: #475569;">I am an active Tax Filer (Exempts 7.5% Advance Income Tax)</span>
+                            Active FBR Tax Filer
                         </label>
                     </div>
-                    <button id="calc-estimate-btn" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1.1rem;">Calculate Estimated Bill</button>
-                    <div id="estimate-result"></div>
                 </div>
+                <button type="button" id="calc-estimate-btn" class="btn btn-primary" style="padding: 0.75rem 1.5rem; width: 100%; max-width: 280px; font-size: 1rem;">Calculate Estimated Bill</button>
             </div>
-        </div>
-    </section>
 
-    <!-- Official portal is intentionally placed after the guidance. -->
-    <section class="bill-checker" id="check-bill">
-        <div class="container">
-            <div class="section-header">
-                <h2>Continue to K-Electric’s bill portal</h2>
-                <p>The embedded page belongs to K-Electric. Enter the 13-digit account number only after you have checked it against a prior bill.</p>
-            </div>
-            <div class="bill-checker-card">
-                <div class="iframe-container">
-                    <div class="iframe-loader" id="bill-loader">
-                        <div class="loader-dots">
-                            <div class="dot"></div>
-                            <div class="dot"></div>
-                            <div class="dot"></div>
-                        </div>
-                        <p>Connecting to Official KE Portal…</p>
+            <div id="estimate-result"></div>
+            <p style="font-size: 0.85rem; color: #64748b; margin-top: 1rem;">*Note: This tool provides an estimated calculation based on standard NEPRA tariff notifications. Final bills issued by K-Electric may include specific Fuel Cost Adjustments (FCA) or local taxes.</p>
+        </section>
+
+        <!-- Section 2: Core Guides Directory -->
+        <section style="margin-bottom: 3rem;">
+            <h2 style="text-align: center; margin-bottom: 1.5rem;">Explore K-Electric Consumer Guides</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                
+                <a href="./electricity-bill-calculator/" style="text-decoration: none; color: inherit;">
+                    <div class="card" style="height: 100%; transition: transform 0.2s;">
+                        <h3 style="color: #0066cc;">⚡ Advanced Bill Calculator</h3>
+                        <p style="font-size: 0.95rem; color: #475569;">Calculate complex multi-appliance usage, compare consumption scenarios, and evaluate monthly kilowatt-hour costs.</p>
                     </div>
-                    <iframe id="bill-iframe" src="https://staging.ke.com.pk:24555/" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" scrolling="no" title="K-Electric official bill portal">
-                        <p>To check your K-Electric duplicate bill online, please enter your 13-digit consumer number in the official KE portal. This embedded tool allows Karachi residents to view and download their electricity bills instantly.</p>
-                    </iframe>
-                </div>
-                <script>
-                    (function () {
-                        var loader = document.getElementById('bill-loader');
-                        var iframe = document.getElementById('bill-iframe');
-                        var done = false;
-                        function hide() {
-                            if (done || !loader) return; done = true;
-                            loader.style.opacity = '0';
-                            loader.style.transition = 'opacity 0.3s';
-                            setTimeout(function () { loader.style.display = 'none'; }, 310);
-                        }
-                        if (iframe) iframe.addEventListener('load', function () { setTimeout(hide, 400); });
-                        setTimeout(hide, 5000);
-                    })();
-                </script>
-            </div>
-        </div>
-    </section>
+                </a>
 
-    <section aria-labelledby="help-title">
-        <section class="section">
-            <div class="container-sm">
-                <article>
-                    <h2 id="help-title">Payment, support, and common problems</h2>
-                    <nav class="toc" aria-label="Page contents">
-                        <p class="toc-title">Table of Contents</p>
-                        <ol class="toc-list">
-                            <li><a href="#calculator">Interactive Bill Estimator</a></li>
-                            <li><a href="#check-bill">View Duplicate Bill</a></li>
-                            <li><a href="#how-to-download">How to Download Online</a></li>
-                            <li><a href="#whatsapp-service">KE Bill via WhatsApp</a></li>
-                            <li><a href="#sms-service">KE Bill via SMS</a></li>
-                            <li><a href="#faq">Common questions</a></li>
-                        </ol>
-                    </nav>
-
-                    <h2 id="how-to-download">How to Download Your KE Duplicate Bill Online</h2>
-                    <p>If the portal does not load, open <a href="https://www.ke.com.pk/" rel="noopener noreferrer">K-Electric’s official website</a> directly and look for its current bill-service option. Browser extensions, a weak connection, or a mistyped account number can all prevent a result.</p>
-
-                    <h3 id="whatsapp-service">Get Your KE Bill on WhatsApp</h3>
-                    <p>K-Electric publishes its customer-contact channels and may update them. Use the current contact details on its official website rather than a forwarded message. Never share OTPs, card details, or account credentials in a social-media chat.</p>
-
-                    <h2 id="sms-service">Check Your KE Bill via SMS</h2>
-                    <p>For payment, choose a channel currently listed by K-Electric or your bank/app and keep the receipt until the payment appears on the account. If a payment is missing, contact the payment provider and K-Electric with the transaction reference—this website cannot trace it.</p>
-
-                    <section id="faq" class="faq" aria-labelledby="faq-title"><h2 id="faq-title">Common questions</h2><details><summary>I do not have an older bill. What can I do?</summary><p>Use K-Electric’s official customer support route and be ready to verify the connection details. Do not guess account numbers or use another person’s bill.</p></details><details><summary>The portal says my account number is invalid.</summary><p>Re-enter all 13 digits without spaces. Confirm that you are using the account number, not a meter number or a payment reference. If it still fails, ask K-Electric for account-specific help.</p></details><details><summary>Can this site accept a bill payment?</summary><p>No. This site is informational only. Payments should be made through a channel approved by K-Electric or your financial institution.</p></details><details><summary>Why does the amount differ from my estimate?</summary><p>An issued bill can include the billing period, tariff category, taxes, adjustments, arrears, and credits. The issued bill and K-Electric’s explanation are authoritative.</p></details></section>
-
-                    <hr style="border:none;border-top:1px solid var(--gray-200);margin:3rem 0;">
-
-                    <div class="author-box" style="display: flex; align-items: center; gap: 1.5rem;">
-                        <img src="./images/author-avatar.webp" alt="Taimoor Hassan" width="60" height="60" style="border-radius: 50%; object-fit: cover;" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2UydThmMCI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTIiLz48cGF0aCBkPSJNMTIgMTJjMi4yMSAwIDQtMS43OSA0LTRzLTEuNzktNC00LTRtMCAxMGwtNC4yNSAzLjVMMTIgMjJsNC4yNS0uNUwxMiAyMnoiIGZpbGw9IiM5NGEzYjgiLz48L3N2Zz4='">
-                        <div>
-                            <p style="margin-bottom: 0.25rem;">Expert Review by <a href="./authors/" class="vcard author" rel="author"><span class="fn">Taimoor Hassan</span></a>, Energy Analyst</p>
-                            <p style="font-size: 0.8rem; color: var(--gray-600); font-weight: 400; margin-bottom: 0;">Last Updated: <strong>July 25, 2026</strong> | Fact Checked by Editorial Team</p>
-                        </div>
+                <a href="./k-electric-bill-guide/" style="text-decoration: none; color: inherit;">
+                    <div class="card" style="height: 100%; transition: transform 0.2s;">
+                        <h3 style="color: #0066cc;">📄 Duplicate Bill Guide</h3>
+                        <p style="font-size: 0.95rem; color: #475569;">Learn how to identify your 13-digit Account Number and retrieve duplicate statements from official channels.</p>
                     </div>
-                    <p class="disclaimer"><em>Disclaimer: This is an independent educational portal designed to help citizens calculate and understand their tariffs. We are not officially affiliated with K-Electric. All rate data is sourced from NEPRA notifications.</em></p>
-                </article>
+                </a>
+
+                <a href="./k-electric-unit-price/" style="text-decoration: none; color: inherit;">
+                    <div class="card" style="height: 100%; transition: transform 0.2s;">
+                        <h3 style="color: #0066cc;">💰 Unit Prices & Tariff Slabs</h3>
+                        <p style="font-size: 0.95rem; color: #475569;">Complete breakdown of Protected vs. Unprotected residential rates, peak hour schedules, and commercial tariffs.</p>
+                    </div>
+                </a>
+
+                <a href="./k-electric-payment-methods/" style="text-decoration: none; color: inherit;">
+                    <div class="card" style="height: 100%; transition: transform 0.2s;">
+                        <h3 style="color: #0066cc;">💳 Payment Channels</h3>
+                        <p style="font-size: 0.95rem; color: #475569;">Compare digital wallets (JazzCash, Easypaisa), mobile banking options, ATMs, and physical payment counters.</p>
+                    </div>
+                </a>
+
+                <a href="./k-electric-support/" style="text-decoration: none; color: inherit;">
+                    <div class="card" style="height: 100%; transition: transform 0.2s;">
+                        <h3 style="color: #0066cc;">📞 Customer Support & Complaints</h3>
+                        <p style="font-size: 0.95rem; color: #475569;">Access 118 helpline details, 8118 SMS codes, WhatsApp contacts, and NEPRA complaint escalation steps.</p>
+                    </div>
+                </a>
+
+                <a href="./k-electric-new-connection/" style="text-decoration: none; color: inherit;">
+                    <div class="card" style="height: 100%; transition: transform 0.2s;">
+                        <h3 style="color: #0066cc;">🔌 New Connection Guide</h3>
+                        <p style="font-size: 0.95rem; color: #475569;">Step-by-step procedures for residential and commercial new meter applications and document requirements.</p>
+                    </div>
+                </a>
+
+                <a href="./k-electric-net-metering/" style="text-decoration: none; color: inherit;">
+                    <div class="card" style="height: 100%; transition: transform 0.2s;">
+                        <h3 style="color: #0066cc;">☀️ Solar Net Metering Guide</h3>
+                        <p style="font-size: 0.95rem; color: #475569;">Guide to bi-directional green meter installation and selling surplus solar power back to K-Electric.</p>
+                    </div>
+                </a>
+
+                <a href="./k-electric-load-shedding/" style="text-decoration: none; color: inherit;">
+                    <div class="card" style="height: 100%; transition: transform 0.2s;">
+                        <h3 style="color: #0066cc;">🕒 Load Shedding Information</h3>
+                        <p style="font-size: 0.95rem; color: #475569;">Understand AT&C feeder loss categories and learn where to verify official neighborhood outage schedules.</p>
+                    </div>
+                </a>
+
+                <a href="./ur/" style="text-decoration: none; color: inherit;">
+                    <div class="card" style="height: 100%; border-left: 4px solid #059669;">
+                        <h3 style="color: #059669;">🇵🇰 اردو میں رہنما کے ای بل</h3>
+                        <p style="font-size: 0.95rem; color: #475569;">کے الیکٹرک بل کی معلومات اور آن لائن سروسز کی اردو گائیڈ۔</p>
+                    </div>
+                </a>
+
             </div>
         </section>
-    </section>
+
+        <!-- Section 3: Official Bill Retrieval Steps -->
+        <article class="card" style="padding: 2rem;">
+            <h2>How to Check & Download Your Official K-Electric Bill</h2>
+            <p>To view your official duplicate bill statement directly from K-Electric:</p>
+            <ol style="line-height: 1.8;">
+                <li>Locate your <strong>13-digit Account Number</strong> on a previous physical bill (located top-right).</li>
+                <li>Visit <a href="https://www.ke.com.pk/" rel="noopener noreferrer">K-Electric’s Official Web Portal</a>.</li>
+                <li>Enter your 13-digit account number into the official bill lookup field.</li>
+                <li>View or download the official PDF statement for payment or tax filing.</li>
+            </ol>
+        </article>
+
     </main>
 
     <div id="footer-placeholder"></div>
-
-    <!-- Schemas -->
-    <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "How to view a K-Electric duplicate bill",
-        "description": "Independent guidance on locating an account number and using K-Electric’s official bill portal.",
-        "image": "https://keduplicatebill.com.pk/images/Ke-Duplicate-bill-View-Download.webp",
-        "author": {"@type":"Organization","name":"KE Bill Guide","url":"https://keduplicatebill.com.pk/about-us/"},
-        "publisher": {"@type":"Organization","name":"KE Bill Guide"},
-        "datePublished": "2026-02-19T00:00:00+05:00",
-        "dateModified": "2026-07-26T00:00:00+05:00",
-        "mainEntityOfPage": {"@type":"WebPage","@id":"https://keduplicatebill.com.pk/"}
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type":"Question","name":"What is the WhatsApp number for K-Electric duplicate bill?","acceptedAnswer":{"@type":"Answer","text":"Save 0348-0000118 in your contacts and send Hi. Select the duplicate bill option to receive your bill instantly."}},
-          {"@type":"Question","name":"Where is my K-Electric account number on the bill?","acceptedAnswer":{"@type":"Answer","text":"Your 13-digit account number is printed at the top of your bill, near your customer information section."}},
-          {"@type":"Question","name":"How do I check my KE electricity bill by SMS?","acceptedAnswer":{"@type":"Answer","text":"Type BILL followed by your 13-digit account number and send to 8119. You will receive your bill amount and due date by return SMS."}},
-          {"@type":"Question","name":"What are peak electricity hours in Karachi?","acceptedAnswer":{"@type":"Answer","text":"April to October: 6:30 PM to 10:30 PM. November to March: 6:00 PM to 10:00 PM. Electricity rates are higher during these windows."}},
-          {"@type":"Question","name":"What is the difference between account number and consumer number on a KE bill?","acceptedAnswer":{"@type":"Answer","text":"The account number is 13 digits and is used for bill checks and online tools. The consumer number is 8 digits and identifies your specific connection for technical requests and complaints."}},
-          {"@type":"Question","name":"How long does a KE online payment take to reflect?","acceptedAnswer":{"@type":"Answer","text":"Most online payments reflect within 24 to 48 hours. If your payment does not appear after 48 hours, call KE at 118 with your transaction ID."}},
-          {"@type":"Question","name":"What happens if I miss the KE bill due date?","acceptedAnswer":{"@type":"Answer","text":"A Late Payment Surcharge (LPS) applies — 5% if you pay within 3 days after the due date, and 10% after that grace period."}},
-          {"@type":"Question","name":"How do I register a complaint with K-Electric?","acceptedAnswer":{"@type":"Answer","text":"Call 118, use WhatsApp at 0348-0000118, or visit the K-Electric complaint registration page on keduplicatebill.com.pk."}}
-        ]
-      }
-    ]
-    </script>
-
-    <script src="./js/calculators.js" defer></script>\n    <script src="./js/layout.js" defer></script>
+    <script src="./js/layout.js"></script>
+    <script src="./js/calculators.js"></script>
+    <script src="./js/ux-enhancements.js"></script>
 </body>
 </html>
