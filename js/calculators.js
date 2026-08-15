@@ -27,17 +27,83 @@ class KECalculators {
     }
 
     calculateBill(units, phase, isFiler) {
-        let rate = 0; let isProtected = false;
-        if(units <= 100) { rate = 13.48; isProtected = true; }
-        else if(units <= 200) { rate = 18.58; isProtected = true; }
-        else if(units <= 300) { rate = 34.26; }
-        else if(units <= 400) { rate = 39.15; }
-        else if(units <= 500) { rate = 41.36; }
-        else if(units <= 600) { rate = 42.78; }
-        else if(units <= 700) { rate = 43.92; }
-        else { rate = 48.84; }
+        let energyCharge = 0;
+        let isProtected = false;
+        let rateSummary = '';
 
-        let energyCharge = units * rate;
+        if (units <= 0) {
+            return { energyCharge: 0, fixedCharge: 0, ed: 0, gst: 0, it: 0, fpa: 0, total: 0, rateSummary: 'Rs. 0.00 / unit', isProtected: true };
+        }
+
+        // Protected Consumers (units <= 200)
+        if (units <= 200) {
+            isProtected = true;
+            if (units <= 100) {
+                energyCharge = units * 13.48;
+                rateSummary = 'Rs. 13.48 / unit (Protected 0-100)';
+            } else {
+                energyCharge = (100 * 13.48) + ((units - 100) * 18.58);
+                rateSummary = 'Progressive Protected Slabs (13.48 & 18.58 / unit)';
+            }
+        } else {
+            // Unprotected Consumers (Progressive NEPRA Slabs)
+            isProtected = false;
+            let remaining = units;
+            rateSummary = 'Progressive Unprotected Slabs';
+
+            // Slab 1: 1 - 100 units @ 16.48
+            let s1 = Math.min(remaining, 100);
+            energyCharge += s1 * 16.48;
+            remaining -= s1;
+
+            // Slab 2: 101 - 200 units @ 22.95
+            if (remaining > 0) {
+                let s2 = Math.min(remaining, 100);
+                energyCharge += s2 * 22.95;
+                remaining -= s2;
+            }
+
+            // Slab 3: 201 - 300 units @ 34.26
+            if (remaining > 0) {
+                let s3 = Math.min(remaining, 100);
+                energyCharge += s3 * 34.26;
+                remaining -= s3;
+            }
+
+            // Slab 4: 301 - 400 units @ 39.15
+            if (remaining > 0) {
+                let s4 = Math.min(remaining, 100);
+                energyCharge += s4 * 39.15;
+                remaining -= s4;
+            }
+
+            // Slab 5: 401 - 500 units @ 41.36
+            if (remaining > 0) {
+                let s5 = Math.min(remaining, 100);
+                energyCharge += s5 * 41.36;
+                remaining -= s5;
+            }
+
+            // Slab 6: 501 - 600 units @ 42.78
+            if (remaining > 0) {
+                let s6 = Math.min(remaining, 100);
+                energyCharge += s6 * 42.78;
+                remaining -= s6;
+            }
+
+            // Slab 7: 601 - 700 units @ 43.92
+            if (remaining > 0) {
+                let s7 = Math.min(remaining, 100);
+                energyCharge += s7 * 43.92;
+                remaining -= s7;
+            }
+
+            // Slab 8: Above 700 units @ 48.84
+            if (remaining > 0) {
+                energyCharge += remaining * 48.84;
+            }
+        }
+
         let fixedCharge = phase === '3' ? (units > 0 ? 500 : 0) : 0; 
         let ed = energyCharge * 0.015;
         let fpa = units * 2.50; 
@@ -45,7 +111,7 @@ class KECalculators {
         let it = (energyCharge > 25000 && !isFiler) ? (energyCharge * 0.075) : 0;
         let total = energyCharge + fixedCharge + ed + gst + it + fpa;
         
-        return { energyCharge, fixedCharge, ed, gst, it, fpa, total, rate, isProtected };
+        return { energyCharge, fixedCharge, ed, gst, it, fpa, total, rateSummary, isProtected };
     }
 
     displayResult(elementId, result) {
@@ -55,7 +121,7 @@ class KECalculators {
         el.innerHTML = `
             <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:1.5rem; margin-top:1.5rem;">
                 <h4 style="margin-bottom:1rem; color:#0f172a; border-bottom:1px solid #e2e8f0; padding-bottom:0.5rem;">Estimated Bill Breakdown</h4>
-                <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;"><span>Energy Charges (${result.rate} / unit)</span><strong>${format(result.energyCharge)}</strong></div>
+                <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;"><span>Energy Charges (${result.rateSummary})</span><strong>${format(result.energyCharge)}</strong></div>
                 ${result.fixedCharge > 0 ? `<div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;"><span>Fixed Charges (3-Phase)</span><strong>${format(result.fixedCharge)}</strong></div>` : ''}
                 <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem; color:#64748b;"><span>Electricity Duty (1.5%)</span><span>${format(result.ed)}</span></div>
                 <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem; color:#64748b;"><span>Est. Fuel Price Adjustment</span><span>${format(result.fpa)}</span></div>
